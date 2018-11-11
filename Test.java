@@ -2,6 +2,6 @@
 public class Test {
 
   public static void main (String[] args) {
-    // main method body
+    System.out.println("I like turtles");
   }
 }
