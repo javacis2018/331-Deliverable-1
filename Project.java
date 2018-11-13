@@ -74,6 +74,7 @@ public class Project {
     	  {
     	  case 1:
     		  int id = customerCount;
+    		  long phone = 0;
     		  
     		  System.out.println("First Name?");
     		  String firstName = input.nextLine();
@@ -86,15 +87,22 @@ public class Project {
     		  while(isValid) {
     			  
     		  System.out.println("Phone Number?");
-    		  int phoneNumber = input.nextInt();
+    		  phone = input.nextLong();
     		  input.nextLine();
     		  
-    		  if(phoneNumber >= 1000000000 && phoneNumber <= 9999999999L) {
-    			  
+    		  if(phone >= 1000000000 && phone <= 9999999999L) {
+    			  isValid = false;
+    		  } else {
+    			  System.out.println("Invalid input, try again.");
     		  }
     		  
     		  }
-    		  System.out.println();
+    		  System.out.println("Email Address?");
+    		  String email = input.nextLine();
+    		  
+    		  customerData[id] = new Customer(firstName, lastName, address,
+    			        phone, email);
+    		  customerCount++;
     		  
     		  break;
     	  case 2:

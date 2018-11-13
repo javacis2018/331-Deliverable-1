@@ -6,7 +6,7 @@ public class Customer {
 public String firstName;     
 public String lastName;
 private String address;
-public int phoneNumber;
+public long phoneNumber;
 public String emailAddress;
 
 // Constructors    
@@ -20,7 +20,7 @@ public Customer()
     
 }     
         
-public Customer(String firstName, String lastName, String address, int
+public Customer(String firstName, String lastName, String address, long
         phoneNumber, String emailAddress)
 {
     this.firstName = firstName;
