@@ -34,11 +34,11 @@ public class Project {
 		 * 
 		 */
 		
-		Customer[] customerData = new Customer[100];
-		Contractor[] contractorData = new Contractor[100];
-		Item[] inventory = new Item[100]; 
-		Sale[] sales = new Sale[100]; 
-		Vendor[] vendors = new Vendor[100]; 
+		Customer[] customerData = new Customer[1000];
+		Contractor[] contractorData = new Contractor[1000];
+		Item[] inventory = new Item[1000]; 
+		Sale[] sales = new Sale[1000]; 
+		Vendor[] vendors = new Vendor[1000]; 
 		
 		while(true) {
         
@@ -98,10 +98,10 @@ public class Project {
     		  
     		  break;
     	  case 2:
-    		  int id2 = contractorCount - 1000;
+    		  int id2 = contractorCount;
     		  
     		  /*
-    		   * CREATE CONTRACTOR
+    		   * CREATE CONTRACTOR (CHRIS)
     		   */
     		  
     		  break;
@@ -142,7 +142,7 @@ public class Project {
       case 3:
     	  
     	  /*
-    	   * CREATE ITEM
+    	   * CREATE ITEM (TYLER)
     	   */
     	  
     	break;
@@ -157,14 +157,14 @@ public class Project {
       case 5:
         
     	  /*
-    	   * ENTER SALE
+    	   * ENTER SALE (AKRAM)
     	   */
     	  
     	  break; 
       case 6:
     	  
     	  /*
-    	   * PRINT RECEIPT
+    	   * PRINT RECEIPT (AKRAM)
     	   */
     	  
     	  break; 
@@ -172,7 +172,7 @@ public class Project {
       case 7:
     	  
     	  /*
-    	   *  CREATE VENDOR
+    	   *  CREATE VENDOR (JEREMY)
     	   */
     	  break;
     	  
@@ -186,15 +186,15 @@ public class Project {
       case 9:
     	  
     	  /*
-    	   * PURCHASE HISTORY FOR CUSTOMER
+    	   * PURCHASE HISTORY FOR CUSTOMER (TYLER)
     	   */
     	  
     	  /*
-    	   * PURCHASE HISTORY FOR ITEMS
+    	   * PURCHASE HISTORY FOR ITEMS (AKRAM)
     	   */
     	  
     	  /*
-    	   * CURRENT INVENTORY LEVELS
+    	   * CURRENT INVENTORY LEVELS (JEREMY)
     	   */
     	  
     	  break;
