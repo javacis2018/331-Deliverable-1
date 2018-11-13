@@ -10,16 +10,16 @@ double weight;
 String description;
 private double salePrice;
 private double pricePaid;
-Vendor vendorName;
+Vendor vendor;
 
-public Item (String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendorName) {
+public Item (String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor) {
 	
 	this.itemName = itemName;
 	this.weight = weight;
 	this.description = description;
 	this.salePrice = salePrice;
 	this.pricePaid = pricePaid;
-	this.vendorName = vendorName;
+	this.vendor = vendor;
 	
 }
 
