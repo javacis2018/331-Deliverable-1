@@ -10,19 +10,21 @@ public class Sale {
     public String date;
     public Customer customer;
     private double price;
+    public int saleID;
     
     
-    public Sale(Item itemSold, int quantity, String date, Customer customer){
+    public Sale(Item itemSold, int quantity, String date, Customer customer, double price, int ID){
         
         this.itemSold = itemSold;
         this.quantity = quantity;
         this.date = date;
         this.customer = customer ;
-        
+        this.price = price;
+        this.saleID = ID;
     }
     public String describeSale(){
-        System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
-                quantity + ", " + "Sale Total:" + (itemSold.getSalePrice() * quantity));
+        System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getPricePaid() + ", " +  "Quanitity:" + 
+                quantity + ", " + "Sale Total:" + (itemSold.getPricePaid() * quantity));
         
         return ("");
     }
