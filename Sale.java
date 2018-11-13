@@ -1,6 +1,5 @@
-
 /*
- * @author Christopher Kang
+ * @author Akram Choukri
  * @version 11 November 2018
  * Modified for the Group Project
 */
@@ -9,9 +8,10 @@ public class Sale {
     public static Item itemSold;
     public int quantity;
     public String date;
-    public String customer;
+    public Customer customer;
     
-    public Sale(Item itemSold, int quantity, String date, String customer){
+    
+    public Sale(Item itemSold, int quantity, String date, Customer customer){
         
         this.itemSold = itemSold;
         this.quantity = quantity;
