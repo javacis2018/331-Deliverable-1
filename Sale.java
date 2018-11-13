@@ -9,6 +9,7 @@ public class Sale {
     public int quantity;
     public String date;
     public Customer customer;
+    private double price;
     
     
     public Sale(Item itemSold, int quantity, String date, Customer customer){
@@ -20,10 +21,12 @@ public class Sale {
         
     }
     public String describeSale(){
-        System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getPrice() + ", " +  "Quanitity:" + 
-                quantity + ", " + "Sale Total:" + (itemSold.getPrice() * quantity));
+        System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
+                quantity + ", " + "Sale Total:" + (itemSold.getSalePrice() * quantity));
         
         return ("");
     }
+    
+    
     
 }
