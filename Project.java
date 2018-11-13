@@ -55,6 +55,7 @@ public class Project {
       System.out.println("6. Print Receipt");
       System.out.println("7. Create Vendor");
       System.out.println("8. Edit Vendor");
+      System.out.println("9. Reports");
       System.out.println("0. Exit");
       select = input.nextInt();
       input.nextLine();
@@ -99,6 +100,9 @@ public class Project {
     	  case 2:
     		  int id2 = contractorCount - 1000;
     		  
+    		  /*
+    		   * CREATE CONTRACTOR
+    		   */
     		  
     		  break;
     	  case 0:
@@ -116,8 +120,18 @@ public class Project {
     	  switch(select3)
     	  {
     	  case 1:
+    		  
+    		  /*
+    		   * EDIT CUSTOMER
+    		   */
+    		  
     		  break;
     	  case 2:
+    		  
+    		  /*
+    		   * EDIT CONTRACTOR
+    		   */
+    		  
     		  break;
     	  case 0:
     		  break;
@@ -126,24 +140,65 @@ public class Project {
           
           
       case 3:
+    	  
+    	  /*
+    	   * CREATE ITEM
+    	   */
+    	  
     	break;
     		  
       case 4:
     	  
+    	  /*
+    	   * EDIT ITEM
+    	   */
+    	  
     	  break;
       case 5:
         
+    	  /*
+    	   * ENTER SALE
+    	   */
+    	  
     	  break; 
       case 6:
+    	  
+    	  /*
+    	   * PRINT RECEIPT
+    	   */
     	  
     	  break; 
     	  
       case 7:
+    	  
+    	  /*
+    	   *  CREATE VENDOR
+    	   */
     	  break;
     	  
       case 8:
+    	  
+    	  /*
+    	   * EDIT VENDOR
+    	   */
     	  break;
           
+      case 9:
+    	  
+    	  /*
+    	   * PURCHASE HISTORY FOR CUSTOMER
+    	   */
+    	  
+    	  /*
+    	   * PURCHASE HISTORY FOR ITEMS
+    	   */
+    	  
+    	  /*
+    	   * CURRENT INVENTORY LEVELS
+    	   */
+    	  
+    	  break;
+    	  
       case 0:
     	  System.exit(0);
     	  break;
