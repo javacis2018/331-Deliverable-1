@@ -1,5 +1,4 @@
 
-package GroupProject;
 
 public class Customer {
 

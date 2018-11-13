@@ -1,4 +1,4 @@
-package GroupProject;
+
 /*
  * @author Christopher Kang
  * @version 11 November 2018

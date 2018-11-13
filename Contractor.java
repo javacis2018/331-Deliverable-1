@@ -1,4 +1,4 @@
-package GroupProject;
+
 
 public class Contractor extends Customer {
 
