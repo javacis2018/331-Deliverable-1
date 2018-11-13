@@ -10,14 +10,16 @@ double weight;
 String description;
 private double salePrice;
 private double pricePaid;
+Vendor vendorName;
 
-public Item (String itemName, double weight, String description, double salePrice, double pricePaid) {
+public Item (String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendorName) {
 	
 	this.itemName = itemName;
 	this.weight = weight;
 	this.description = description;
 	this.salePrice = salePrice;
 	this.pricePaid = pricePaid;
+	this.vendorName = vendorName;
 	
 }
 
@@ -36,4 +38,5 @@ public double getPricePaid() {
 public void setPricePaid(double pricePaid) {
 	this.pricePaid = pricePaid;
 }
+
 }
