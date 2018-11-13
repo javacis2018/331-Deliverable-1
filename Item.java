@@ -5,6 +5,7 @@
  */
 public class Item {
 	
+int id;
 String itemName;
 double weight;
 String description;
@@ -12,8 +13,9 @@ private double salePrice;
 private double pricePaid;
 Vendor vendor;
 
-public Item (String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor) {
+public Item (int id, String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor) {
 	
+	this.id = id;
 	this.itemName = itemName;
 	this.weight = weight;
 	this.description = description;

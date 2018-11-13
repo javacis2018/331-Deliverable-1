@@ -25,10 +25,11 @@ public class Project {
 		 * 
 		 */
 		
-		Customer[][] customerData = new Customer[2][100]; //0=ID, 1=customer
-		Contractor[][] contractorData = new Contractor[2][100]; //0=ID, 1=contractor
-		Item[][] inventory = new Item[2][100]; //0=ID, 1=item
-		Sale[][] sales = new Sale[2][100]; //0=ID, 1=sale
+		Customer[] customerData = new Customer[100]; //0=ID, 1=customer
+		Contractor[] contractorData = new Contractor[100]; //0=ID, 1=contractor
+		Item[] inventory = new Item[100]; //0=ID, 1=item
+		Sale[] sales = new Sale[100]; //0=ID, 1=sale
+		Vendor[] vendors = new Vendor[100]; //0=ID, 1=vendor
 		
 		while(true) {
         
@@ -70,8 +71,8 @@ public class Project {
     	  
     	  break;
       case 2:
-    	  System.out.println("1. Create Individual Customer");
-          System.out.println("2. Create Business Customer/Contractor");
+    	  System.out.println("1. Edit Individual Customer");
+          System.out.println("2. Edit Business Customer/Contractor");
           System.out.println("0. Back");
     	  int select3 = input.nextInt();
     	  
