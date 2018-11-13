@@ -23,12 +23,11 @@ public class Sale {
         this.saleID = ID;
     }
     public String describeSale(){
-        System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getPricePaid() + ", " +  "Quanitity:" + 
+        System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
                 quantity + ", " + "Sale Total:" + (itemSold.getPricePaid() * quantity));
         
         return ("");
     }
-    
     
     
 }
