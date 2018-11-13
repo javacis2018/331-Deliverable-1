@@ -108,9 +108,35 @@ public class Project {
     	  case 2:
     		  int id2 = contractorCount;
     		  
-    		  /*
-    		   * CREATE CONTRACTOR (CHRIS)
-    		   */
+    		  long phone2 = 0;
+    		  
+    		  System.out.println("First Name?");
+    		  String firstName2 = input.nextLine();
+    		  System.out.println("Last Name?");
+    		  String lastName2 = input.nextLine();
+    		  System.out.println("Address?");
+    		  String address2 = input.nextLine();
+    		  
+    		  boolean isValid2 = true;
+    		  while(isValid2) {
+    			  
+    		  System.out.println("Phone Number?");
+    		  phone2 = input.nextLong();
+    		  input.nextLine();
+    		  
+    		  if(phone2 >= 1000000000 && phone2 <= 9999999999L) {
+    			  isValid2 = false;
+    		  } else {
+    			  System.out.println("Invalid input, try again.");
+    		  }
+    		  
+    		  }
+    		  System.out.println("Email Address?");
+    		  String email2 = input.nextLine();
+    		  
+    		  //customerData[id] = new Customer(firstName, lastName, address,
+    			//        phone, email);
+    		 // customerCount++;
     		  
     		  break;
     	  case 0:
