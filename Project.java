@@ -114,8 +114,13 @@ public class Project {
     		  String firstName2 = input.nextLine();
     		  System.out.println("Last Name?");
     		  String lastName2 = input.nextLine();
-    		  System.out.println("Address?");
+    		  System.out.println("Business Name?");
+    		  String busName = input.nextLine();
+    		  System.out.println("Business Address?");
     		  String address2 = input.nextLine();
+    		  System.out.println("Contractor Number?");
+    		  int cnum = input.nextInt();
+    		  input.nextLine();
     		  
     		  boolean isValid2 = true;
     		  while(isValid2) {
