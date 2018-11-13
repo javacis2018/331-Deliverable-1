@@ -17,8 +17,18 @@ public class Project {
 		Scanner input = new Scanner(System.in);
 		int customerCount = 0;
 		
-        //String[][] customerData = new String[6][100]; //0=ID, 1=firstName, 2=lastName, 3=address, 4=phone, 5=age
         //double[][] loanData = new double[4][100]; //0=ID, 1=loan, 2=interest rate, 3=monthly payment
+		
+		/*
+		 * ID Naming Scheme
+		 * 
+		 * 
+		 */
+		
+		Customer[][] customerData = new Customer[2][100]; //0=ID, 1=customer
+		Contractor[][] contractorData = new Contractor[2][100]; //0=ID, 1=contractor
+		Item[][] inventory = new Item[2][100]; //0=ID, 1=item
+		Sale[][] sales = new Sale[2][100]; //0=ID, 1=sale
 		
 		while(true) {
         
