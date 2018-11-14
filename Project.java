@@ -210,9 +210,17 @@ public class Project {
     	  
       case 7:
     	  
-    	  /*
-    	   *  CREATE VENDOR (JEREMY)
-    	   */
+    	int vID = vendorCount;
+    		  
+        System.out.println("Vendor Name?");
+        String vName = input.nextLine();
+    	System.out.println("Vendor Address?");
+        String vAddy = input.nextLine();  	  
+        System.out.println("Phone Number?");
+        long vPhone = input.nextLong();
+        
+        venderInfo[vID] = new Vendor(vName, vAddy, vPhone);
+        vendorCount++;
     	  break;
     	  
       case 8:
