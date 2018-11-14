@@ -24,7 +24,7 @@ public class Sale {
     }
     public String describeSale(){
         System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
-                quantity + ", " + "Sale Total:" + (itemSold.getPricePaid() * quantity));
+                this.quantity + ", " + "Sale Total:" + (this.itemSold.getPricePaid()));
         
         return ("");
     }
