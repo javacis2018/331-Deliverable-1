@@ -185,14 +185,11 @@ public class Project {
     	  
     	  break;
       case 5:
-        System.out.println("Enter Sale Number");
-            if (saleCount > 2999 && saleCount < 3999){
-                input.nextInt();
-            }
-            else{
-                System.out.println("Enter a Valid Sale Number between 3000 and 3999");
-            }
+            int id4 = saleCount - 3000;
             
+            
+            
+            //sales[id4] = new Sale;
     	  /*
     	   * ENTER SALE (AKRAM)
     	   */
@@ -208,15 +205,15 @@ public class Project {
     	  
       case 7:
     	  
-    	int vID = vendorCount - 4000;
+    	//int vID = vendorCount - 4000;
     		  
-        String vName = nextLine("Vendor Name?");
-        String vAddy = nextLine("Vendor Address?");  	  
-        System.out.println("Phone Number?");
-        long vPhone = input.nextLong();
+       // String vName = nextLine("Vendor Name?");
+       // String vAddy = nextLine("Vendor Address?");  	  
+       // System.out.println("Phone Number?");
+       // long vPhone = input.nextLong();
         
         //vendors[vID] = new Vendor(vName, vAddy, vPhone);
-        vendorCount++;
+        //vendorCount++;
     	  break;
     	  
       case 8:
@@ -236,10 +233,17 @@ public class Project {
     	   * PURCHASE HISTORY FOR ITEMS (AKRAM)
     	   */
     	  
-    	  /*
-    	   * CURRENT INVENTORY LEVELS (JEREMY)
-    	   */
-    	  
+    	  //CURRENT INVENTORY LEVELS ~ Half Psuedo/Half Technical Code (Method to be moved outside main later)
+	/*
+		public static void Inventory Report() {
+			for ( int x = 0; x < itemArray.length; x++)
+        		{
+          		System.out.print(itemArray[~Location of Name]+": ");
+          		System.out.print(itemArray[~Location of Stock]);
+                	 }
+       			System.out.println();
+		}
+    	  */
     	  break;
     	  
       case 0:
