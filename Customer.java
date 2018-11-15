@@ -2,12 +2,18 @@
 
 public class Customer {
 
-// Data fields    
+// Data fields   
+public int custID;    
 public String firstName;     
 public String lastName;
 private String address;
 public int phoneNumber;
 public String emailAddress;
+
+String[][] custArray = new String[5][];
+
+
+
 
 // Constructors    
 public Customer()
@@ -20,9 +26,10 @@ public Customer()
     
 }     
         
-public Customer(String firstName, String lastName, String address, int
+public Customer(int custID,String firstName, String lastName, String address, int
         phoneNumber, String emailAddress)
 {
+    this.custID = custID;
     this.firstName = firstName;
     this.lastName = lastName;
     this.address = address;
@@ -35,6 +42,7 @@ public String getAddress()
 {
     return this.address;
 }
+
 
 
 }// End of class
