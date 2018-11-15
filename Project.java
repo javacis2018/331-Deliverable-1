@@ -10,11 +10,12 @@ import java.util.Scanner;
  */
 public class Project {
 
+	public static Scanner input = new Scanner(System.in);
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		
 		int customerCount = 0;
 		int contractorCount = 1000;
 		int itemCount = 2000;
@@ -76,12 +77,9 @@ public class Project {
     		  int id = customerCount;
     		  long phone = 0;
     		  
-    		  System.out.println("First Name?");
-    		  String firstName = input.nextLine();
-    		  System.out.println("Last Name?");
-    		  String lastName = input.nextLine();
-    		  System.out.println("Address?");
-    		  String address = input.nextLine();
+    		  String firstName = nextLine("First Name?");
+    		  String lastName = nextLine("Last Name?");
+    		  String address = nextLine("Address?");
     		  
     		  boolean isValid = true;
     		  while(isValid) {
@@ -97,8 +95,7 @@ public class Project {
     		  }
     		  
     		  }
-    		  System.out.println("Email Address?");
-    		  String email = input.nextLine();
+    		  String email = nextLine("Email Address?");
     		  
     		  customerData[id] = new Customer(firstName, lastName, address,
     			        phone, email);
@@ -110,14 +107,10 @@ public class Project {
     		  
     		  long phone2 = 0;
     		  
-    		  System.out.println("First Name?");
-    		  String firstName2 = input.nextLine();
-    		  System.out.println("Last Name?");
-    		  String lastName2 = input.nextLine();
-    		  System.out.println("Business Name?");
-    		  String busName = input.nextLine();
-    		  System.out.println("Business Address?");
-    		  String address2 = input.nextLine();
+    		  String firstName2 = nextLine("First Name?");
+    		  String lastName2 = nextLine("Last Name?");
+    		  String address2 = nextLine("Business Address?");
+    		  String busName = nextLine("Business Name?");
     		  System.out.println("Contractor Number?");
     		  int cnum = input.nextInt();
     		  input.nextLine();
@@ -136,8 +129,7 @@ public class Project {
     		  }
     		  
     		  }
-    		  System.out.println("Email Address?");
-    		  String email2 = input.nextLine();
+    		  String email2 = nextLine("Email Address?");
     		  
     		  contractorData[id2] = new Contractor(firstName2, lastName2, phone2, email2, cnum,busName, address2);
     		 contractorCount++;
@@ -207,7 +199,7 @@ public class Project {
     	  
     	  break; 
       case 6:
-    	  System.out.println(describeSale());
+    	  //System.out.println(describeSale());
     	  /*
     	   * PRINT RECEIPT (AKRAM)
     	   */
@@ -225,7 +217,7 @@ public class Project {
         System.out.println("Phone Number?");
         long vPhone = input.nextLong();
         
-        venderInfo[vID] = new Vendor(vName, vAddy, vPhone);
+        //venderInfo[vID] = new Vendor(vName, vAddy, vPhone);
         vendorCount++;
     	  break;
     	  
@@ -261,4 +253,9 @@ public class Project {
 		}
     }
 
+	
+	public static String nextLine(String display) {
+		System.out.println(display);
+		return input.nextLine();
+	}
 }
