@@ -59,35 +59,33 @@ public class Project {
                 5.0, 10.0, vendors[0]);
                 vendorCount++;
                 inventory[1] = new Item(2001, 300, "Hammers", 13.0, "Iron Hammers", 
-                30.0, 10.0, vendors[0]);
+                30.0, 10.0, vendors[1]);
                 vendorCount++;
-                inventory[2] = new Item(2002, 50, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[2] = new Item(2002, 50, "Laptops", 20.0, "Sony Laptop", 
+                300.0, 10.0, vendors[2]);
                 vendorCount++;
-                inventory[3] = new Item(2003, 120, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[3] = new Item(2003, 120, "Drywall", 1.0, "liquid for drywall", 
+                15.0, 10.0, vendors[0]);
                 vendorCount++;
-                inventory[4] = new Item(2004, 115, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[4] = new Item(2004, 115, "Cement", 13.0, "chalk for creating cement", 
+                20.0, 10.0, vendors[0]);
                 vendorCount++;
-                inventory[5] = new Item(2005, 500, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[5] = new Item(2005, 500, "Short Screws", 1.0, "Short neck Screws", 
+                5.0, 10.0, vendors[1]);
                 vendorCount++;
-                inventory[6] = new Item(2006, 20, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[6] = new Item(2006, 20, "Nails", .5, "Long neck Nails", 
+                3.0, 10.0, vendors[0]);
                 vendorCount++;
-                inventory[7] = new Item(2007, 10, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[7] = new Item(2007, 10, "TV", 40.0, "Sony TV", 
+                450.0, 10.0, vendors[2]);
                 vendorCount++;
-                inventory[8] = new Item(2008, 75, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[8] = new Item(2008, 75, "MousePad", 1.0, "Sony Mousepad", 
+                10.0, 10.0, vendors[2]);
                 vendorCount++;
-                inventory[9] = new Item(2009, 400, "Screws", 1.0, "Long neck Screws", 
-                5.0, 10.0, vendors[0]);
+                inventory[9] = new Item(2009, 400, "2x4 wood block", 13.0, "2x4 plywood blocks", 
+                7.0, 10.0, vendors[1]);
                 vendorCount++;
                 
-                
-		Vendor[] vendors = new Vendor[1000];
 		//int[][] salesData = new int[3][1000]; //0=Sale ID, 1= Item ID, 2=Quantity
 		
                 
