@@ -39,7 +39,8 @@ public class Project {
 		Contractor[] contractorData = new Contractor[1000];
 		Item[] inventory = new Item[1000]; 
 		Sale[] sales = new Sale[1000]; 
-		Vendor[] vendors = new Vendor[1000]; 
+		Vendor[] vendors = new Vendor[1000];
+		//int[][] salesData = new int[3][1000]; //0=Sale ID, 1= Item ID, 2=Quantity
 		
 		while(true) {
         
@@ -65,6 +66,8 @@ public class Project {
       {
       
       case 1:
+    	  
+    	  
           System.out.println("1. Create Individual Customer");
           System.out.println("2. Create Business Customer/Contractor");
           System.out.println("0. Back");
@@ -74,6 +77,11 @@ public class Project {
     	  switch(select2)
     	  {
     	  case 1:
+    		  
+    		  boolean cont = true;
+    		  
+    		  while(cont) {
+    		  
     		  int id = customerCount;
     		  long phone = 0;
     		  
@@ -101,8 +109,32 @@ public class Project {
     			        phone, email);
     		  customerCount++;
     		  
+boolean invalid = true;
+    		  
+        	  while(invalid) { //the complex "another customer?" loop
+            	  System.out.println("Add another individual customer? (Y/N)");
+            	  //input.nextLine();
+            	  String in = input.nextLine();
+            	  	if (in.equals("N") || in.equals("n")) {
+            	  		cont = false;
+            	  		invalid = false;
+            	  	} else if (in.equals("Y") || in.equals("y")) {
+            	  		cont = true;
+            	  		invalid = false;
+            	  	} else {
+            	  		invalid = true;
+            	  	}
+        	  }
+    		  
+    		  }
+    		  
     		  break;
     	  case 2:
+    		  
+    		  boolean cont2 = true;
+    		  
+    		  while(cont2) {
+    		  
     		  int id2 = contractorCount - 1000;
     		  
     		  long phone2 = 0;
@@ -134,6 +166,25 @@ public class Project {
     		  contractorData[id2] = new Contractor(firstName2, lastName2, phone2, email2, cnum,busName, address2);
     		 contractorCount++;
     		  
+    		 boolean invalid = true;
+   		  
+       	  while(invalid) { //the complex "another customer?" loop
+           	  System.out.println("Add another contractor? (Y/N)");
+           	  //input.nextLine();
+           	  String in = input.nextLine();
+           	  	if (in.equals("N") || in.equals("n")) {
+           	  		cont = false;
+           	  		invalid = false;
+           	  	} else if (in.equals("Y") || in.equals("y")) {
+           	  		cont = true;
+           	  		invalid = false;
+           	  	} else {
+           	  		invalid = true;
+           	  	}
+       	  }
+   		  
+   		  }
+    		 
     		  break;
     	  case 0:
     		  break;
@@ -154,6 +205,16 @@ public class Project {
     		  /*
     		   * EDIT CUSTOMER
     		   */
+    		  
+    		  System.out.println("Pick a customer to edit:");
+    		  for(int i = 0; i < customerCount; i++) {
+    			  Customer temp = customerData[i];
+    			  System.out.println("ID: "+i+" // "+customerData.toString());
+    		  }
+    		  int cuID = input.nextInt();
+    		  input.nextLine();
+    		  
+    		  //if (cuID)
     		  
     		  break;
     	  case 2:
