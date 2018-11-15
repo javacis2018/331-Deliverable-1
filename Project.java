@@ -189,7 +189,7 @@ public class Project {
             
             
             
-            sales[id4] = new Sale;
+            //sales[id4] = new Sale;
     	  /*
     	   * ENTER SALE (AKRAM)
     	   */
