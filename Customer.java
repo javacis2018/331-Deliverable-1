@@ -34,11 +34,9 @@ public Customer(String firstName, String lastName, long
     this.emailAddress = emailAddress;
 }
         
-<<<<<<< HEAD
-public Customer(int custID,String firstName, String lastName, String address, int
-=======
+//public Customer(int custID,String firstName, String lastName, String address, int
+		
 public Customer(String firstName, String lastName, String address, long
->>>>>>> fe6c16832ea403b6bd12a44d5adcbbb1f12173be
         phoneNumber, String emailAddress)
 {
     this.custID = custID;
