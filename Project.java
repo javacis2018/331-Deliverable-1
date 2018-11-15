@@ -208,14 +208,14 @@ public class Project {
     	  
       case 7:
     	  
-    	int vID = vendorCount;
+    	int vID = vendorCount - 4000;
     		  
         String vName = nextLine("Vendor Name?");
         String vAddy = nextLine("Vendor Address?");  	  
         System.out.println("Phone Number?");
         long vPhone = input.nextLong();
         
-        //venderInfo[vID] = new Vendor(vName, vAddy, vPhone);
+        vendors[vID] = new Vendor(vName, vAddy, vPhone);
         vendorCount++;
     	  break;
     	  
