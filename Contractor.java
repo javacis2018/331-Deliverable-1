@@ -15,6 +15,17 @@ public Contractor()
     this.businessAddress = "noAddress";
 }
 
+public Contractor(String firstName, String lastName, long
+        phoneNumber, String emailAddress, int contractorNumber, String businessName, String 
+        businessAddress)
+{
+	super(firstName, lastName,
+	        phoneNumber, emailAddress);
+    this.contractorNumber = contractorNumber;
+    this.businessName = businessName;
+    this.businessAddress = businessAddress;
+    
+}    
 
 public Contractor(int contractorNumber, String businessName, String 
         businessAddress)

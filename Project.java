@@ -106,7 +106,7 @@ public class Project {
     		  
     		  break;
     	  case 2:
-    		  int id2 = contractorCount;
+    		  int id2 = contractorCount - 1000;
     		  
     		  long phone2 = 0;
     		  
@@ -139,9 +139,8 @@ public class Project {
     		  System.out.println("Email Address?");
     		  String email2 = input.nextLine();
     		  
-    		  //customerData[id] = new Customer(firstName, lastName, address,
-    			//        phone, email);
-    		 // customerCount++;
+    		  contractorData[id2] = new Contractor(firstName2, lastName2, phone2, email2, cnum,busName, address2);
+    		 contractorCount++;
     		  
     		  break;
     	  case 0:

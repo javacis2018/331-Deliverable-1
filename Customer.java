@@ -19,6 +19,14 @@ public Customer()
     this.emailAddress = "noEmail";
     
 }     
+
+public Customer(String firstName, String lastName, long
+        phoneNumber, String emailAddress) {
+	this.firstName = firstName;
+    this.lastName = lastName;
+    this.phoneNumber = phoneNumber;
+    this.emailAddress = emailAddress;
+}
         
 public Customer(String firstName, String lastName, String address, long
         phoneNumber, String emailAddress)
