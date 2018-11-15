@@ -11,6 +11,7 @@ public class Sale {
     public Customer customer;
     private double price;
     public int saleID;
+    public int customerID;
     
     
     public Sale(Item itemSold, int quantity, String date, Customer customer, double price, int ID){
