@@ -40,9 +40,58 @@ public class Project {
 		Item[] inventory = new Item[1000]; 
 		Sale[] sales = new Sale[1000]; 
 		Vendor[] vendors = new Vendor[1000]; 
-		
+		//prepopulate Customer objects
+                customerData[0] = new Customer("Bob", "Mcdaniels", 5712128900L, "BobM@yahoo.com");
+                customerCount++;
+                customerData[1] = new Customer("Jacob", "Thomas", 2388330048L, "JakeThomas@aol.com");
+                customerCount++;
+                customerData[2] = new Customer("Rachel", "Peterson", 5714712993L, "RachP@aol.com");
+                customerCount++;
+                customerData[3] = new Customer("Tyler", "Joseph", 3010229384L, "TylerJoseph@hotmail.com");
+                customerCount++;
+                //4 Customers, 10 Items, 3 Vendors, and 5 Sales. 
+                //pre populate vendor objects
+                vendors[0] = new Vendor("Home Depot", "121 N Loudoun Lane",5712445698L);
+                vendorCount++;
+                vendors[1] = new Vendor("Lowes", "588 S Grimble Park",2881558383L); 
+                vendorCount++;
+                vendors[2] = new Vendor("Sony", "1300 W Marshall Blvd",7576447236L); 
+                vendorCount++;
+                //int id, int count, String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor
+                //pre populate Item objects
+                inventory[0] = new Item(2000, 1000, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[1] = new Item(2001, 300, "Hammers", 13.0, "Iron Hammers", 
+                30.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[2] = new Item(2002, 50, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[3] = new Item(2003, 120, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[4] = new Item(2004, 115, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[5] = new Item(2005, 500, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[6] = new Item(2006, 20, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[7] = new Item(2007, 10, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[8] = new Item(2008, 75, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[9] = new Item(2009, 400, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                
+                
 		while(true) {
-        
         
         int select;
       
