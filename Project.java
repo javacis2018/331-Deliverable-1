@@ -294,10 +294,17 @@ boolean invalid = true;
     	   * PURCHASE HISTORY FOR ITEMS (AKRAM)
     	   */
     	  
-    	  /*
-    	   * CURRENT INVENTORY LEVELS (JEREMY)
-    	   */
-    	  
+    	  //CURRENT INVENTORY LEVELS ~ Half Psuedo/Half Technical Code (Method to be moved outside main later)
+	/*
+		public static void Inventory Report() {
+			for ( int x = 0; x < itemArray.length; x++)
+        		{
+          		System.out.print(itemArray[~Location of Name]+": ");
+          		System.out.print(itemArray[~Location of Stock]);
+                	 }
+       			System.out.println();
+		}
+    	  */
     	  break;
     	  
       case 0:
