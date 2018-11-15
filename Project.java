@@ -34,9 +34,10 @@ public class Project {
 		Contractor[] contractorData = new Contractor[1000];
 		Item[] inventory = new Item[1000]; 
 		Sale[] sales = new Sale[1000]; 
-                
 		Vendor[] vendors = new Vendor[1000]; 
-		//prepopulate Customer objects
+		
+
+                //prepopulate Customer objects
                 customerData[0] = new Customer("Bob", "Mcdaniels", 5712128900L, "BobM@yahoo.com");
                 customerCount++;
                 customerData[1] = new Customer("Jacob", "Thomas", 2388330048L, "JakeThomas@aol.com");
@@ -155,7 +156,7 @@ public class Project {
     			        phone, email);
     		  customerCount++;
     		  
-boolean invalid = true;
+                  boolean invalid = true;
     		  
         	  while(invalid) { //the complex "another customer?" loop
             	  System.out.println("Add another individual customer? (Y/N)");
@@ -331,11 +332,15 @@ boolean invalid = true;
     	  break;
           
       case 9:
-    	  
+    	  //Purchase History for any given Customer (both types). This should show Items,
+            //quantities, total purchase cost, and dates for the Customer. 
     	  /*
     	   * PURCHASE HISTORY FOR CUSTOMER (Akram)
     	   */
     	  
+          
+          
+          
     	  /*
     	   * PURCHASE HISTORY FOR ITEMS (Tyler)
     	   */
