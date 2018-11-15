@@ -210,10 +210,8 @@ public class Project {
     	  
     	int vID = vendorCount;
     		  
-        System.out.println("Vendor Name?");
-        String vName = input.nextLine();
-    	System.out.println("Vendor Address?");
-        String vAddy = input.nextLine();  	  
+        String vName = nextLine("Vendor Name?");
+        String vAddy = nextLine("Vendor Address?");  	  
         System.out.println("Phone Number?");
         long vPhone = input.nextLong();
         
