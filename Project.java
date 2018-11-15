@@ -215,7 +215,7 @@ public class Project {
         System.out.println("Phone Number?");
         long vPhone = input.nextLong();
         
-        vendors[vID] = new Vendor(vName, vAddy, vPhone);
+        //vendors[vID] = new Vendor(vName, vAddy, vPhone);
         vendorCount++;
     	  break;
     	  
