@@ -5,10 +5,14 @@ public class Vendor {
     String vAddy;
     String vPhone;
     int vID;
-    int items[]; 
     
+    // Constructor
     public Vendor(String vName, String vAddy,
-            String vPhone, int vID)
+            String vPhone, int vID) {
+        this.vName = vName;
+        this.vAddy = vAddy;
+        this.vPhone = vPhone;
+        this.vID = vID;
+    }
     
 }
-//test
