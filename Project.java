@@ -367,4 +367,42 @@ boolean invalid = true;
 		System.out.println(display);
 		return input.nextLine();
 	}
+        
+    public static void createItem(Item[] inventory)
+    {
+    int temp = itemCount - 4000;
+    
+    for (int i = 0; i < inventory.length; i++)
+    {
+        System.out.print("Please enter item name: ");  
+        String itemName = input.nextLine();
+        System.out.print("Please enter item weight: ");
+        double weight = input.nextDouble();
+        System.out.print("Please enter item description: ");
+        String description = input.nextLine();
+        System.out.print("Please enter sales price of item (e.g $99.99): ");
+        double salePrice = input.nextDouble();
+        System.out.print("Please enter price paid for item (e.g $50.00): ");
+        double pricePaid = input.nextDouble();
+        System.out.print("Please enter item vendor: ");
+        //Vendor vendor = input.nextLine();
+        /*
+        inventory[temp] = new Item(String itemName, double weight, String description, 
+        double salePrice, double pricePaid, Vendor vendor)
+        
+        itemCount++;
+*/
+    }    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }
