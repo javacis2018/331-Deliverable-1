@@ -194,14 +194,21 @@ public class Project {
     	  
     	  break;
       case 5:
-        
+        System.out.println("Enter Sale Number");
+            if (saleCount > 2999 && saleCount < 3999){
+                input.nextInt();
+            }
+            else{
+                System.out.println("Enter a Valid Sale Number between 3000 and 3999");
+            }
+            
     	  /*
     	   * ENTER SALE (AKRAM)
     	   */
     	  
     	  break; 
       case 6:
-    	  
+    	  System.out.println(describeSale());
     	  /*
     	   * PRINT RECEIPT (AKRAM)
     	   */
