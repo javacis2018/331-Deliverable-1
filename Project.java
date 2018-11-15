@@ -1,20 +1,16 @@
 import java.util.Scanner;
-
 /**
  * 
  */
 
-/**
- * @author kangcs
- *
- */
 public class Project {
 
+	public static Scanner input = new Scanner(System.in);
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		
 		int customerCount = 0;
 		int contractorCount = 1000;
 		int itemCount = 2000;
@@ -34,14 +30,68 @@ public class Project {
 		 * 
 		 */
 		
-		Customer[] customerData = new Customer[100];
-		Contractor[] contractorData = new Contractor[100];
-		Item[] inventory = new Item[100]; 
-		Sale[] sales = new Sale[100]; 
-		Vendor[] vendors = new Vendor[100]; 
+		Customer[] customerData = new Customer[1000];
+		Contractor[] contractorData = new Contractor[1000];
+		Item[] inventory = new Item[1000]; 
+		Sale[] sales = new Sale[1000]; 
+                
+		Vendor[] vendors = new Vendor[1000]; 
+		//prepopulate Customer objects
+                customerData[0] = new Customer("Bob", "Mcdaniels", 5712128900L, "BobM@yahoo.com");
+                customerCount++;
+                customerData[1] = new Customer("Jacob", "Thomas", 2388330048L, "JakeThomas@aol.com");
+                customerCount++;
+                customerData[2] = new Customer("Rachel", "Peterson", 5714712993L, "RachP@aol.com");
+                customerCount++;
+                customerData[3] = new Customer("Tyler", "Joseph", 3010229384L, "TylerJoseph@hotmail.com");
+                customerCount++;
+                //4 Customers, 10 Items, 3 Vendors, and 5 Sales. 
+                //pre populate vendor objects
+                vendors[0] = new Vendor("Home Depot", "121 N Loudoun Lane",5712445698L);
+                vendorCount++;
+                vendors[1] = new Vendor("Lowes", "588 S Grimble Park",2881558383L); 
+                vendorCount++;
+                vendors[2] = new Vendor("Sony", "1300 W Marshall Blvd",7576447236L); 
+                vendorCount++;
+                //int id, int count, String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor
+                //pre populate Item objects
+                inventory[0] = new Item(2000, 1000, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[1] = new Item(2001, 300, "Hammers", 13.0, "Iron Hammers", 
+                30.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[2] = new Item(2002, 50, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[3] = new Item(2003, 120, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[4] = new Item(2004, 115, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[5] = new Item(2005, 500, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[6] = new Item(2006, 20, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[7] = new Item(2007, 10, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[8] = new Item(2008, 75, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                inventory[9] = new Item(2009, 400, "Screws", 1.0, "Long neck Screws", 
+                5.0, 10.0, vendors[0]);
+                vendorCount++;
+                
+                
+		Vendor[] vendors = new Vendor[1000];
+		//int[][] salesData = new int[3][1000]; //0=Sale ID, 1= Item ID, 2=Quantity
 		
+                
 		while(true) {
-        
         
         int select;
       
@@ -64,6 +114,8 @@ public class Project {
       {
       
       case 1:
+    	  
+    	  
           System.out.println("1. Create Individual Customer");
           System.out.println("2. Create Business Customer/Contractor");
           System.out.println("0. Back");
@@ -73,37 +125,114 @@ public class Project {
     	  switch(select2)
     	  {
     	  case 1:
-    		  int id = customerCount;
     		  
-    		  System.out.println("First Name?");
-    		  String firstName = input.nextLine();
-    		  System.out.println("Last Name?");
-    		  String lastName = input.nextLine();
-    		  System.out.println("Address?");
-    		  String address = input.nextLine();
+    		  boolean cont = true;
+    		  
+    		  while(cont) {
+    		  
+    		  int id = customerCount;
+    		  long phone = 0;
+    		  
+    		  String firstName = nextLine("First Name?");
+    		  String lastName = nextLine("Last Name?");
+    		  String address = nextLine("Address?");
     		  
     		  boolean isValid = true;
     		  while(isValid) {
     			  
     		  System.out.println("Phone Number?");
-    		  int phoneNumber = input.nextInt();
+    		  phone = input.nextLong();
     		  input.nextLine();
     		  
-    		  if(phoneNumber >= 1000000000 && phoneNumber <= 9999999999L) {
-    			  
+    		  if(phone >= 1000000000 && phone <= 9999999999L) {
+    			  isValid = false;
+    		  } else {
+    			  System.out.println("Invalid input, try again.");
     		  }
     		  
     		  }
-    		  System.out.println();
+    		  String email = nextLine("Email Address?");
+    		  
+    		  customerData[id] = new Customer(firstName, lastName, address,
+    			        phone, email);
+    		  customerCount++;
+    		  
+boolean invalid = true;
+    		  
+        	  while(invalid) { //the complex "another customer?" loop
+            	  System.out.println("Add another individual customer? (Y/N)");
+            	  //input.nextLine();
+            	  String in = input.nextLine();
+            	  	if (in.equals("N") || in.equals("n")) {
+            	  		cont = false;
+            	  		invalid = false;
+            	  	} else if (in.equals("Y") || in.equals("y")) {
+            	  		cont = true;
+            	  		invalid = false;
+            	  	} else {
+            	  		invalid = true;
+            	  	}
+        	  }
+    		  
+    		  }
     		  
     		  break;
     	  case 2:
+    		  
+    		  boolean cont2 = true;
+    		  
+    		  while(cont2) {
+    		  
     		  int id2 = contractorCount - 1000;
     		  
-    		  /*
-    		   * CREATE CONTRACTOR
-    		   */
+    		  long phone2 = 0;
     		  
+    		  String firstName2 = nextLine("First Name?");
+    		  String lastName2 = nextLine("Last Name?");
+    		  String address2 = nextLine("Business Address?");
+    		  String busName = nextLine("Business Name?");
+    		  System.out.println("Contractor Number?");
+    		  int cnum = input.nextInt();
+    		  input.nextLine();
+    		  
+    		  boolean isValid2 = true;
+    		  while(isValid2) {
+    			  
+    		  System.out.println("Phone Number?");
+    		  phone2 = input.nextLong();
+    		  input.nextLine();
+    		  
+    		  if(phone2 >= 1000000000 && phone2 <= 9999999999L) {
+    			  isValid2 = false;
+    		  } else {
+    			  System.out.println("Invalid input, try again.");
+    		  }
+    		  
+    		  }
+    		  String email2 = nextLine("Email Address?");
+    		  
+    		  contractorData[id2] = new Contractor(firstName2, lastName2, phone2, email2, cnum,busName, address2);
+    		 contractorCount++;
+    		  
+    		 boolean invalid = true;
+   		  
+       	  while(invalid) { //the complex "another customer?" loop
+           	  System.out.println("Add another contractor? (Y/N)");
+           	  //input.nextLine();
+           	  String in = input.nextLine();
+           	  	if (in.equals("N") || in.equals("n")) {
+           	  		cont = false;
+           	  		invalid = false;
+           	  	} else if (in.equals("Y") || in.equals("y")) {
+           	  		cont = true;
+           	  		invalid = false;
+           	  	} else {
+           	  		invalid = true;
+           	  	}
+       	  }
+   		  
+   		  }
+    		 
     		  break;
     	  case 0:
     		  break;
@@ -125,6 +254,16 @@ public class Project {
     		   * EDIT CUSTOMER
     		   */
     		  
+    		  System.out.println("Pick a customer to edit:");
+    		  for(int i = 0; i < customerCount; i++) {
+    			  Customer temp = customerData[i];
+    			  System.out.println("ID: "+i+" // "+customerData.toString());
+    		  }
+    		  int cuID = input.nextInt();
+    		  input.nextLine();
+    		  
+    		  //if (cuID)
+    		  
     		  break;
     	  case 2:
     		  
@@ -142,7 +281,7 @@ public class Project {
       case 3:
     	  
     	  /*
-    	   * CREATE ITEM
+    	   * CREATE ITEM (TYLER)
     	   */
     	  
     	break;
@@ -155,25 +294,35 @@ public class Project {
     	  
     	  break;
       case 5:
-        
+            int id4 = saleCount - 3000;
+            
+            
+            
+            //sales[id4] = new Sale;
     	  /*
-    	   * ENTER SALE
+    	   * ENTER SALE (AKRAM)
     	   */
     	  
     	  break; 
       case 6:
-    	  
+    	  //System.out.println(describeSale());
     	  /*
-    	   * PRINT RECEIPT
+    	   * PRINT RECEIPT (AKRAM)
     	   */
     	  
     	  break; 
     	  
       case 7:
     	  
-    	  /*
-    	   *  CREATE VENDOR
-    	   */
+    	//int vID = vendorCount - 4000;
+    		  
+       // String vName = nextLine("Vendor Name?");
+       // String vAddy = nextLine("Vendor Address?");  	  
+       // System.out.println("Phone Number?");
+       // long vPhone = input.nextLong();
+        
+        //vendors[vID] = new Vendor(vName, vAddy, vPhone);
+        //vendorCount++;
     	  break;
     	  
       case 8:
@@ -186,17 +335,24 @@ public class Project {
       case 9:
     	  
     	  /*
-    	   * PURCHASE HISTORY FOR CUSTOMER
+    	   * PURCHASE HISTORY FOR CUSTOMER (TYLER)
     	   */
     	  
     	  /*
-    	   * PURCHASE HISTORY FOR ITEMS
+    	   * PURCHASE HISTORY FOR ITEMS (AKRAM)
     	   */
     	  
-    	  /*
-    	   * CURRENT INVENTORY LEVELS
-    	   */
-    	  
+    	  //CURRENT INVENTORY LEVELS ~ Half Psuedo/Half Technical Code (Method to be moved outside main later)
+	/*
+		public static void Inventory Report() {
+			for ( int x = 0; x < itemArray.length; x++)
+        		{
+          		System.out.print(itemArray[~Location of Name]+": ");
+          		System.out.print(itemArray[~Location of Stock]);
+                	 }
+       			System.out.println();
+		}
+    	  */
     	  break;
     	  
       case 0:
@@ -208,4 +364,9 @@ public class Project {
 		}
     }
 
+	
+	public static String nextLine(String display) {
+		System.out.println(display);
+		return input.nextLine();
+	}
 }

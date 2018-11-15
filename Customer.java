@@ -7,7 +7,7 @@ public int custID;
 public String firstName;     
 public String lastName;
 private String address;
-public int phoneNumber;
+public long phoneNumber;
 public String emailAddress;
 
 String[][] custArray = new String[5][];
@@ -25,8 +25,20 @@ public Customer()
     this.emailAddress = "noEmail";
     
 }     
+
+public Customer(String firstName, String lastName, long
+        phoneNumber, String emailAddress) {
+	this.firstName = firstName;
+    this.lastName = lastName;
+    this.phoneNumber = phoneNumber;
+    this.emailAddress = emailAddress;
+}
         
+<<<<<<< HEAD
 public Customer(int custID,String firstName, String lastName, String address, int
+=======
+public Customer(String firstName, String lastName, String address, long
+>>>>>>> fe6c16832ea403b6bd12a44d5adcbbb1f12173be
         phoneNumber, String emailAddress)
 {
     this.custID = custID;
@@ -43,6 +55,9 @@ public String getAddress()
     return this.address;
 }
 
+public String toString() {
+	return "test";
+}
 
 
 }// End of class
