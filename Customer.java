@@ -34,9 +34,7 @@ public Customer(String firstName, String lastName, long
     this.emailAddress = emailAddress;
 }
         
-//public Customer(int custID,String firstName, String lastName, String address, int
-		
-public Customer(String firstName, String lastName, String address, long
+public Customer(int custID,String firstName, String lastName, String address, long
         phoneNumber, String emailAddress)
 {
     this.custID = custID;
