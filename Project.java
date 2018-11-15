@@ -333,11 +333,11 @@ boolean invalid = true;
       case 9:
     	  
     	  /*
-    	   * PURCHASE HISTORY FOR CUSTOMER (TYLER)
+    	   * PURCHASE HISTORY FOR CUSTOMER (Akram)
     	   */
     	  
     	  /*
-    	   * PURCHASE HISTORY FOR ITEMS (AKRAM)
+    	   * PURCHASE HISTORY FOR ITEMS (Tyler)
     	   */
     	  
     	  //CURRENT INVENTORY LEVELS ~ Half Psuedo/Half Technical Code (Method to be moved outside main later)
@@ -404,5 +404,5 @@ boolean invalid = true;
         
         
         
-        
+    }  
 }
