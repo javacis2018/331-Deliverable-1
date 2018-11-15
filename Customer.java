@@ -44,5 +44,8 @@ public String getAddress()
     return this.address;
 }
 
+public String toString() {
+	return "test";
+}
 
 }// End of class
