@@ -6,7 +6,7 @@ public class Customer {
 public int custID;    
 public String firstName;     
 public String lastName;
-private String address;
+public String address;
 public long phoneNumber;
 public String emailAddress;
 

@@ -261,7 +261,36 @@ public class Project {
     		  int cuID = input.nextInt();
     		  input.nextLine();
     		  
-    		  //if (cuID)
+    		  System.out.println("Select Field to Edit");
+    		  System.out.println("1. First Name");
+    		  System.out.println("2. Last Name");
+    		  System.out.println("3. Address");
+    		  System.out.println("4. Phone Number");
+    		  System.out.println("5. Email Address");
+    		  int editID = input.nextInt();
+    		  input.nextLine();
+    		  System.out.println("Enter new data");
+    		  
+    		  switch(editID) {
+    		  
+    		  case 1:
+    			  customerData[editID].firstName = input.nextLine();
+    			  break;
+    		  case 2:
+    			  customerData[editID].lastName = input.nextLine();
+    			  break;
+    		  case 3:
+    			  customerData[editID].address = input.nextLine();
+    			  break;
+    		  case 4:
+    			  customerData[editID].phoneNumber = input.nextLong();
+    			  input.nextLine();
+    			  break;
+    		  case 5:
+    			  customerData[editID].emailAddress = input.nextLine();
+    			  break;
+    		  
+    		  }
     		  
     		  break;
     	  case 2:
@@ -282,6 +311,30 @@ public class Project {
     	  /*
     	   * CREATE ITEM (TYLER)
     	   */
+    	  
+    	    int temp = itemCount - 4000;
+    	    
+    	    for (int i = 0; i < inventory.length; i++)
+    	    {
+    	        System.out.print("Please enter item name: ");  
+    	        String itemName = input.nextLine();
+    	        System.out.print("Please enter item weight: ");
+    	        double weight = input.nextDouble();
+    	        System.out.print("Please enter item description: ");
+    	        String description = input.nextLine();
+    	        System.out.print("Please enter sales price of item (e.g $99.99): ");
+    	        double salePrice = input.nextDouble();
+    	        System.out.print("Please enter price paid for item (e.g $50.00): ");
+    	        double pricePaid = input.nextDouble();
+    	        System.out.print("Please enter item vendor: ");
+    	        //Vendor vendor = input.nextLine();
+    	        /*
+    	        inventory[temp] = new Item(String itemName, double weight, String description, 
+    	        double salePrice, double pricePaid, Vendor vendor)
+    	        
+    	        itemCount++;
+    	*/
+    	    }   
     	  
     	break;
     		  
@@ -373,41 +426,5 @@ public class Project {
 		return input.nextLine();
 	}
         
-    public static void createItem(Item[] inventory)
-    {
-    int temp = itemCount - 4000;
-    
-    for (int i = 0; i < inventory.length; i++)
-    {
-        System.out.print("Please enter item name: ");  
-        String itemName = input.nextLine();
-        System.out.print("Please enter item weight: ");
-        double weight = input.nextDouble();
-        System.out.print("Please enter item description: ");
-        String description = input.nextLine();
-        System.out.print("Please enter sales price of item (e.g $99.99): ");
-        double salePrice = input.nextDouble();
-        System.out.print("Please enter price paid for item (e.g $50.00): ");
-        double pricePaid = input.nextDouble();
-        System.out.print("Please enter item vendor: ");
-        //Vendor vendor = input.nextLine();
-        /*
-        inventory[temp] = new Item(String itemName, double weight, String description, 
-        double salePrice, double pricePaid, Vendor vendor)
-        
-        itemCount++;
-*/
-    }    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }  
+  //create item method moved to main method.
 }
