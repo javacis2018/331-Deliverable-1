@@ -457,7 +457,16 @@ Vendor vendor;
 			  input.nextLine();
 			  break;
 		  case 7:
-			  inventory[cuID3].businessName = input.nextLine();
+			  
+			  for(int r = 0; r < (vendorCount - 4000); r++) {
+  	        	System.out.println(vendors[r].toString());
+  	        }
+  	        
+  	        System.out.print("Vendor ID?");
+  	        int vendorID = input.nextInt();
+  	        input.nextLine();
+  	        
+			  inventory[cuID3].vendor = input.nextInt();
 			  break;
 		  
 		  }
