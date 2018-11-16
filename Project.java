@@ -162,6 +162,7 @@ public class Project {
             	  		cont = true;
             	  		invalid = false;
             	  	} else {
+            	  		System.out.println("Invalid input, try again.");
             	  		invalid = true;
             	  	}
         	  }
@@ -183,8 +184,7 @@ public class Project {
     		  String lastName2 = nextLine("Last Name?");
     		  String address2 = nextLine("Business Address?");
     		  String busName = nextLine("Business Name?");
-    		  System.out.println("Contractor Number?");
-    		  int cnum = nextInt("");
+    		  int cnum = nextInt("Contractor Number?");
     		  
     		  phone2 = phoneNumber();
     		  String email2 = nextLine("Email Address?");
@@ -199,13 +199,14 @@ public class Project {
            	  //input.nextLine();
            	  String in = input.nextLine();
            	  	if (in.equals("N") || in.equals("n")) {
-           	  		cont = false;
+           	  		cont2 = false;
            	  		invalid = false;
            	  	} else if (in.equals("Y") || in.equals("y")) {
-           	  		cont = true;
+           	  		cont2 = true;
            	  		invalid = false;
            	  	} else {
            	  		invalid = true;
+           	  	System.out.println("Invalid input, try again.");
            	  	}
        	  }
    		  
@@ -250,20 +251,20 @@ public class Project {
     		  switch(editID) {
     		  
     		  case 1:
-    			  customerData[cuID].firstName = input.nextLine();
+    			  customerData[cuID].firstName = nextLine("");
     			  break;
     		  case 2:
-    			  customerData[cuID].lastName = input.nextLine();
+    			  customerData[cuID].lastName = nextLine("");
     			  break;
     		  case 3:
-    			  customerData[cuID].address = input.nextLine();
+    			  customerData[cuID].address = nextLine("");
     			  break;
     		  case 4:
     			  customerData[cuID].phoneNumber = phoneNumber();
     			  
     			  break;
     		  case 5:
-    			  customerData[cuID].emailAddress = input.nextLine();
+    			  customerData[cuID].emailAddress = nextLine("");
     			  break;
     		  
     		  }
@@ -276,9 +277,9 @@ public class Project {
     		   */
     		  
     		  System.out.println("Pick a contractor to edit:");
-    		  for(int i = 0; i < contractorCount; i++) {
+    		  for(int i = 0; i < contractorCount-1000; i++) {
     			  Contractor temp2 = contractorData[i];
-    			  System.out.println("ID: "+i+" // "+temp2.toString()); //FIX TO STRING
+    			  System.out.println("ID: "+(i+1000)+" // "+temp2.toString()); //FIX TO STRING
     		  }
     		  int cuID2 = nextInt("");
     		  
@@ -297,25 +298,25 @@ public class Project {
     		  switch(editID2) {
     		  
     		  case 1:
-    			  contractorData[cuID2].firstName = input.nextLine();
+    			  contractorData[cuID2].firstName = nextLine("");
     			  break;
     		  case 2:
-    			  contractorData[cuID2].lastName = input.nextLine();
+    			  contractorData[cuID2].lastName = nextLine("");
     			  break;
     		  case 3:
-    			  contractorData[cuID2].address = input.nextLine();
+    			  contractorData[cuID2].address = nextLine("");
     			  break;
     		  case 4:
     			  contractorData[cuID2].phoneNumber = phoneNumber();
     			  break;
     		  case 5:
-    			  contractorData[cuID2].emailAddress = input.nextLine();
+    			  contractorData[cuID2].emailAddress = nextLine("");
     			  break;
     		  case 6:
     			  contractorData[cuID2].contractorNumber = nextInt("");
     			  break;
     		  case 7:
-    			  contractorData[cuID2].businessName = input.nextLine();
+    			  contractorData[cuID2].businessName = nextLine("");
     			  break;
     		  
     		  }
@@ -384,13 +385,13 @@ public class Project {
 			  inventory[cuID3].count = nextInt("");
 			  break;
 		  case 2:
-			  inventory[cuID3].itemName = input.nextLine();
+			  inventory[cuID3].itemName = nextLine("");
 			  break;
 		  case 3:
 			  inventory[cuID3].weight = nextDouble("");
 			  break;
 		  case 4:
-			  inventory[cuID3].description = input.nextLine();
+			  inventory[cuID3].description = nextLine("");
 			  break;
 		  case 5:
 			  inventory[cuID3].setSalePrice(nextDouble(""));
