@@ -24,8 +24,6 @@ public class Project {
 		int saleCount = 3000;
 		int vendorCount = 4000;
 		
-        //double[][] loanData = new double[4][100]; //0=ID, 1=loan, 2=interest rate, 3=monthly payment
-		
 		/*
 		 * ID Naming Scheme
 		 * 
@@ -97,8 +95,27 @@ public class Project {
                 contractorData[0] = new Contractor("Steven", "Strange", 9874441295L, "sstrangemd@fastmail.com", 1,"Stranger Things", "1 Infinite Loop");
                 contractorCount++;
                 
-    		 //sales[0] = new Sale(inventory[9], 100, "November 16", customerData[3], inventory[9].getPricePaid());
-             //saleCount++;   
+                int itemC0[] = {2000,2009};
+                int itemQ0[] = {20, 5};
+                int itemC1[] = {2008, 2006, 2003};
+                int itemQ1[] = {1, 4, 12};
+                int itemC2[] = {2003,2005};
+                int itemQ2[] = {20, 80};
+                int itemC3[] = {2007};
+                int itemQ3[] = {1};
+                int itemC4[] = {2008};
+                int itemQ4[] = {3};
+                
+    		 sales[0] = new Sale(itemC0, itemQ0, 2, "December 12, 1996", 135.00, customerData[3]);
+             saleCount++;
+             sales[1] = new Sale(itemC1, itemQ1, 3, "September 12, 2014", 224.00, customerData[0]);
+             saleCount++;   
+             sales[2] = new Sale(itemC2, itemQ2, 2, "October 12, 2005", 700.00, customerData[2]);
+             saleCount++; 
+             sales[3] = new Sale(itemC3, itemQ3, 1, "January 12, 2018", 450.00, customerData[1]);
+             saleCount++;   
+             sales[4] = new Sale(itemC4, itemQ4, 1, "April 12, 2000", 30.00, customerData[3]);
+             saleCount++;   
     		 
 		while(true) {
         
