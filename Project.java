@@ -274,20 +274,20 @@ public class Project {
     		  switch(editID) {
     		  
     		  case 1:
-    			  customerData[editID].firstName = input.nextLine();
+    			  customerData[cuID].firstName = input.nextLine();
     			  break;
     		  case 2:
-    			  customerData[editID].lastName = input.nextLine();
+    			  customerData[cuID].lastName = input.nextLine();
     			  break;
     		  case 3:
-    			  customerData[editID].address = input.nextLine();
+    			  customerData[cuID].address = input.nextLine();
     			  break;
     		  case 4:
-    			  customerData[editID].phoneNumber = input.nextLong();
+    			  customerData[cuID].phoneNumber = input.nextLong();
     			  input.nextLine();
     			  break;
     		  case 5:
-    			  customerData[editID].emailAddress = input.nextLine();
+    			  customerData[cuID].emailAddress = input.nextLine();
     			  break;
     		  
     		  }
@@ -298,6 +298,55 @@ public class Project {
     		  /*
     		   * EDIT CONTRACTOR
     		   */
+    		  
+    		  System.out.println("Pick a customer to edit:");
+    		  for(int i = 0; i < customerCount; i++) {
+    			  Customer temp = customerData[i];
+    			  System.out.println("ID: "+i+" // "+customerData.toString());
+    		  }
+    		  int cuID2 = input.nextInt();
+    		  input.nextLine();
+    		  
+    		  System.out.println("Select Field to Edit");
+    		  System.out.println("1. First Name");
+    		  System.out.println("2. Last Name");
+    		  System.out.println("3. Address");
+    		  System.out.println("4. Phone Number");
+    		  System.out.println("5. Email Address");
+    		  System.out.println("6. Contractor Number");
+    		  System.out.println("7. Business Name");
+    		  
+    		  int editID2 = input.nextInt();
+    		  input.nextLine();
+    		  System.out.println("Enter new data");
+    		  
+    		  switch(editID2) {
+    		  
+    		  case 1:
+    			  contractorData[cuID2].firstName = input.nextLine();
+    			  break;
+    		  case 2:
+    			  contractorData[cuID2].lastName = input.nextLine();
+    			  break;
+    		  case 3:
+    			  contractorData[cuID2].address = input.nextLine();
+    			  break;
+    		  case 4:
+    			  contractorData[cuID2].phoneNumber = input.nextLong();
+    			  input.nextLine();
+    			  break;
+    		  case 5:
+    			  contractorData[cuID2].emailAddress = input.nextLine();
+    			  break;
+    		  case 6:
+    			  contractorData[cuID2].contractorNumber = input.nextInt();
+    			  input.nextLine();
+    			  break;
+    		  case 7:
+    			  contractorData[cuID2].businessName = input.nextLine();
+    			  break;
+    		  
+    		  }
     		  
     		  break;
     	  case 0:
