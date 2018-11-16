@@ -10,7 +10,6 @@
  */
 public class Item {
 	
-//int id;
 int count;
 String itemName;
 double weight;

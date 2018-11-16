@@ -407,7 +407,43 @@ listItems(itemCount, inventory);
       case 5:
             int id4 = saleCount - 3000;
             
-            int[][] staging = new int[2][1000];
+            //int[][] staging = new int[2][1000];
+            
+            listCustomers(customerCount, customerData);
+            int cust = nextInt("Choose current customer:");
+            
+            int unique = nextInt("How many UNIQUE items are being purchased?");
+            
+            listItems(itemCount, inventory);
+            int[] itemCache = new int[1000];
+            int[] itemQty = new int[1000];
+            
+            for (int t = 0; t < unique; t++) { //THESE ARE SCALED DOWN
+            	itemCache[t] = (nextInt("Select item:") + 2000);
+            	int temp9 = itemCache[t];
+            	int limit = inventory[temp9].count;
+            	
+            	boolean isValid4 = true;
+            	
+            	while(isValid4) {
+            		itemQty[t] = nextInt("Quantity?");
+            		if (itemQty[t] <= limit) {
+            			isValid4 = false;
+            		} else {
+            			System.out.println("Insufficient stock, try again.");
+            		}
+            	}
+            }
+            	String date = nextLine("Date?");
+            	
+            	double total = 0;
+            	
+            	for(int y = 0; y < unique; y++) {
+            		total += (inventory[itemCache[y]].getSalePrice() * itemQty[y]);      	
+            			}
+            
+            sales[id4] = new Sale(itemCache, itemQty, date, customerData[cust]);
+            		saleCount++;
             
            /*
             * list customers
@@ -510,11 +546,13 @@ listItems(itemCount, inventory);
 			   	
 			  break;
 		  case 3:
+			  /*
 			  System.out.println("Item Name\tQuantity");
                           for(int i = 0; i<inventory.length;i++)
                               System.out.println(),
                                       inventory[i].itemName, inventory[i].quantity);
 			  break;
+			  */
 			  default: System.out.println("Invalid input, try again.");
 		  
 		  }
