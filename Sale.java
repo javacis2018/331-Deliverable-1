@@ -19,14 +19,14 @@ public class Sale {
     public int customerID;
     
     
-    public Sale(Item itemSold, int quantity, String date, Customer customer, double price, int ID){
+    public Sale(Item itemSold, int quantity, String date, Customer customer, double price){
         
         this.itemSold = itemSold;
         this.quantity = quantity;
         this.date = date;
         this.customer = customer ;
         this.price = price;
-        this.saleID = ID;
+        //this.saleID = ID;
     }
     public String describeSale(){
         System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
