@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  * CIS 331 Group Project
@@ -113,8 +114,7 @@ public class Project {
       System.out.println("8. Edit Vendor");
       System.out.println("9. Reports");
       System.out.println("0. Exit");
-      select = input.nextInt();
-      input.nextLine();
+      select = nextInt("");
       
       switch(select) 
       {
@@ -125,8 +125,7 @@ public class Project {
           System.out.println("1. Create Individual Customer");
           System.out.println("2. Create Business Customer/Contractor");
           System.out.println("0. Back");
-    	  int select2 = input.nextInt();
-    	  input.nextLine();
+    	  int select2 = nextInt("");
     	  
     	  switch(select2)
     	  {
@@ -186,8 +185,7 @@ public class Project {
     		  String address2 = nextLine("Business Address?");
     		  String busName = nextLine("Business Name?");
     		  System.out.println("Contractor Number?");
-    		  int cnum = input.nextInt();
-    		  input.nextLine();
+    		  int cnum = nextInt("");
     		  
     		  phone2 = phoneNumber();
     		  String email2 = nextLine("Email Address?");
@@ -224,8 +222,7 @@ public class Project {
     	  System.out.println("1. Edit Individual Customer");
           System.out.println("2. Edit Business Customer/Contractor");
           System.out.println("0. Back");
-    	  int select3 = input.nextInt();
-    	  input.nextLine();
+    	  int select3 = nextInt("");
     	  
     	  switch(select3)
     	  {
@@ -240,8 +237,7 @@ public class Project {
     			  Customer temp = customerData[i];
     			  System.out.println("ID: "+i+" // "+customerData.toString());
     		  }
-    		  int cuID = input.nextInt();
-    		  input.nextLine();
+    		  int cuID = nextInt("");
     		  
     		  System.out.println("Select Field to Edit");
     		  System.out.println("1. First Name");
@@ -249,8 +245,7 @@ public class Project {
     		  System.out.println("3. Address");
     		  System.out.println("4. Phone Number");
     		  System.out.println("5. Email Address");
-    		  int editID = input.nextInt();
-    		  input.nextLine();
+    		  int editID = nextInt("");
     		  System.out.println("Enter new data");
     		  
     		  switch(editID) {
@@ -286,8 +281,7 @@ public class Project {
     			  Contractor temp2 = contractorData[i];
     			  System.out.println("ID: "+i+" // "+temp2.toString()); //FIX TO STRING
     		  }
-    		  int cuID2 = input.nextInt();
-    		  input.nextLine();
+    		  int cuID2 = nextInt("");
     		  
     		  System.out.println("Select Field to Edit");
     		  System.out.println("1. First Name");
@@ -298,8 +292,7 @@ public class Project {
     		  System.out.println("6. Contractor Number");
     		  System.out.println("7. Business Name");
     		  
-    		  int editID2 = input.nextInt();
-    		  input.nextLine();
+    		  int editID2 = nextInt("");
     		  System.out.println("Enter new data");
     		  
     		  switch(editID2) {
@@ -321,8 +314,7 @@ public class Project {
     			  contractorData[cuID2].emailAddress = input.nextLine();
     			  break;
     		  case 6:
-    			  contractorData[cuID2].contractorNumber = input.nextInt();
-    			  input.nextLine();
+    			  contractorData[cuID2].contractorNumber = nextInt("");
     			  break;
     		  case 7:
     			  contractorData[cuID2].businessName = input.nextLine();
@@ -353,16 +345,14 @@ public class Project {
     	        System.out.print("Price Paid? (e.g. 99.99");
     	        double pricePaid = input.nextDouble();
     	        System.out.println("How many in inventory?");
-    	        int inv = input.nextInt();
-    	        input.nextLine();
+    	        int inv = nextInt("");
     	        //LIST AVAILABLE VENDORS HERE
     	        for(int r = 0; r < (vendorCount - 4000); r++) {
     	        	System.out.println(vendors[r].toString());
     	        }
     	        
     	        System.out.print("Vendor ID?");
-    	        int vendorID = input.nextInt();
-    	        input.nextLine();
+    	        int vendorID = nextInt("");
     	        
     	        inventory[temp] = new Item(itemCount, inv, itemName, weight, description, 
     	        salePrice, pricePaid, vendors[vendorID]);
@@ -381,8 +371,7 @@ public class Project {
 			  Item temp3 = inventory[i];
 			  System.out.println("ID: "+(i+2000)+" // "+temp3.toString()); //FIX TO STRING
 		  }
-		  int cuID3 = input.nextInt();
-		  input.nextLine();
+		  int cuID3 = nextInt("");
 		  
 		  System.out.println("Select Field to Edit");
 		  System.out.println("1. Quantity Available");
@@ -393,15 +382,13 @@ public class Project {
 		  System.out.println("6. Price Paid");
 		  System.out.println("7. Vendor");
 		  
-		  int editID3 = input.nextInt();
-		  input.nextLine();
+		  int editID3 = nextInt("");
 		  System.out.println("Enter new data");
 		  
 		  switch(editID3) {
 		  
 		  case 1:
-			  inventory[cuID3].count = input.nextInt();
-			  input.nextLine();
+			  inventory[cuID3].count = nextInt("");
 			  break;
 		  case 2:
 			  inventory[cuID3].itemName = input.nextLine();
@@ -428,8 +415,7 @@ public class Project {
   	        }
   	        
   	        System.out.print("Vendor ID?");
-  	        int vendorID = input.nextInt();
-  	        input.nextLine();
+  	        int vendorID = nextInt("");
   	        
 			  break;
 		  
@@ -478,16 +464,14 @@ public class Project {
 			  Vendor temp4 = vendors[z];
 			  System.out.println("ID: "+(z+4000)+" // "+temp4.toString()); //FIX TO STRING
 		  }
-		  int cuID4 = input.nextInt();
-		  input.nextLine();
+		  int cuID4 = nextInt("");
 		  
 		  System.out.println("Select Field to Edit");
 		  System.out.println("1. Name");
 		  System.out.println("2. Address");
 		  System.out.println("3. Phone Number");
 		  
-		  int editID4 = input.nextInt();
-		  input.nextLine();
+		  int editID4 = nextInt("");
 		  System.out.println("Enter new data");
 		  
 		  switch(editID4) {
@@ -542,21 +526,6 @@ public class Project {
 		}
     }
 
-	public static String isNotBlank() {
-		boolean notValid2 = true;
-		String output = "";
-		
-		while(notValid2) {
-			output = input.nextLine();
-			if (output.length() > 0) {
-				notValid2 = false;
-			} else {
-				System.out.println("Invalid input, try again.");
-			}
-		}
-		return output;
-	}
-	
 	  public static long phoneNumber() {
 	   boolean notValid=true;
 	    long phone0 = 0; 
@@ -576,10 +545,44 @@ public class Project {
 	    }
 	
 	public static String nextLine(String display) {
-		System.out.println(display);
-		return input.nextLine();
+		
+		boolean notValid2 = true;
+		String output = "";
+		
+		while(notValid2) {
+			System.out.println(display);
+			output = input.nextLine();
+			if (output.length() > 0) {
+				notValid2 = false;
+			} else {
+				System.out.println("Invalid input, try again.");
+			}
+		}
+		
+		return output;
 	}
         
+	public static int nextInt(String display) {
+		boolean notValid3 = true;
+		int output2 = 0;
+		String stagingArea = "";
+		System.out.println(display);
+		
+		while(notValid3) {
+			
+			stagingArea = input.nextLine();
+			
+			try {
+				output2 = Integer.parseInt(stagingArea);
+				notValid3 = false;
+			} catch (Exception e) {
+				System.out.println("Invalid input, try again.");
+			}
+			
+		}
+
+		return output2;
+	}
    
     /*public static void printInventory(Item[] inventory)
     {
