@@ -65,34 +65,34 @@ public class Project {
                 //pre populate Item objects
                 inventory[0] = new Item(2000, 1000, "Screws", 1.0, "Long neck Screws", 
                 5.0, 10.0, vendors[0]);
-                vendorCount++;
+                itemCount++;
                 inventory[1] = new Item(2001, 300, "Hammers", 13.0, "Iron Hammers", 
                 30.0, 10.0, vendors[1]);
-                vendorCount++;
+                itemCount++;
                 inventory[2] = new Item(2002, 50, "Laptops", 20.0, "Sony Laptop", 
                 300.0, 10.0, vendors[2]);
-                vendorCount++;
+                itemCount++;
                 inventory[3] = new Item(2003, 120, "Drywall", 1.0, "liquid for drywall", 
                 15.0, 10.0, vendors[0]);
-                vendorCount++;
+                itemCount++;
                 inventory[4] = new Item(2004, 115, "Cement", 13.0, "chalk for creating cement", 
                 20.0, 10.0, vendors[0]);
-                vendorCount++;
+                itemCount++;
                 inventory[5] = new Item(2005, 500, "Short Screws", 1.0, "Short neck Screws", 
                 5.0, 10.0, vendors[1]);
-                vendorCount++;
+                itemCount++;
                 inventory[6] = new Item(2006, 20, "Nails", .5, "Long neck Nails", 
                 3.0, 10.0, vendors[0]);
-                vendorCount++;
+                itemCount++;
                 inventory[7] = new Item(2007, 10, "TV", 40.0, "Sony TV", 
                 450.0, 10.0, vendors[2]);
-                vendorCount++;
+                itemCount++;
                 inventory[8] = new Item(2008, 75, "MousePad", 1.0, "Sony Mousepad", 
                 10.0, 10.0, vendors[2]);
-                vendorCount++;
+                itemCount++;
                 inventory[9] = new Item(2009, 400, "2x4 wood block", 13.0, "2x4 plywood blocks", 
                 7.0, 10.0, vendors[1]);
-                vendorCount++;
+                itemCount++;
                 
 		//int[][] salesData = new int[3][1000]; //0=Sale ID, 1= Item ID, 2=Quantity
 		
@@ -402,22 +402,12 @@ public class Project {
     	  //EDIT ITEM
 
 		  System.out.println("Pick an item to edit:");
-		  for(int i = 0; i < itemCount; i++) {
+		  for(int i = 0; i < itemCount-2000; i++) {
 			  Item temp3 = inventory[i];
-			  System.out.println("ID: "+i+" // "+temp3.toString()); //FIX TO STRING
+			  System.out.println("ID: "+(i+2000)+" // "+temp3.toString()); //FIX TO STRING
 		  }
 		  int cuID3 = input.nextInt();
 		  input.nextLine();
-		  
-		  /*
-int count;
-String itemName;
-double weight;
-String description;
-private double salePrice;
-private double pricePaid;
-Vendor vendor;
-		   */
 		  
 		  System.out.println("Select Field to Edit");
 		  System.out.println("1. Quantity Available");
@@ -459,7 +449,7 @@ Vendor vendor;
 		  case 7:
 			  
 			  for(int r = 0; r < (vendorCount - 4000); r++) {
-  	        	System.out.println(vendors[r].toString());
+  	        	System.out.println("ID: " + (r+4000) + " " + vendors[r].toString());
   	        }
   	        
   	        System.out.print("Vendor ID?");
