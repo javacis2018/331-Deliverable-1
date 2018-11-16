@@ -48,7 +48,7 @@ public Contractor(int contractorNumber, String businessName, String
 }    
     
 public String toString() {
-	return firstName + " " + lastName + ","+ businessName;
+	return firstName + " " + lastName + ","+ businessName + " // " + businessAddress + " // " + phoneNumber + " // " + emailAddress;
 }
     
 }// End of class

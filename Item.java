@@ -57,6 +57,6 @@ public void incrementCount() {
 }
     public String toString()
     {
-        return itemName + " // " + description + " // QTY: " + count + " // WGT: " + weight + " $" + salePrice;
+        return itemName + " // " + description + " // QTY: " + count + " // WGT: " + weight + " $" + salePrice + " // V: " + vendor.vName;
     }
 }
