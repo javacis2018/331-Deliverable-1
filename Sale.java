@@ -10,8 +10,7 @@
  */
 
 public class Sale {
-    public static Item itemSold;
-    public int quantity;
+	public int[][] saleData;
     public String date;
     public Customer customer;
     private double price;
@@ -19,23 +18,24 @@ public class Sale {
     public int customerID;
     
     
-    public Sale(Item itemSold, int quantity, String date, Customer customer, double price){
+    public Sale(int[][] saleData, String date, Customer customer, double price){
         
-        this.itemSold = itemSold;
-        this.quantity = quantity;
+    	for(int i=0; i<saleData.length; i++) //1st var is item, 2nd var is qty
+    		  for(int j=0; j<saleData[i].length; j++)
+    		    saleData[i][j]=this.saleData[i][j];
+    	
         this.date = date;
         this.customer = customer ;
         this.price = price;
-        //this.saleID = ID;
     }
-    public String describeSale(){
-        System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
-                this.quantity + ", " + "Sale Total:" + (this.itemSold.getPricePaid()));
+   // public String describeSale(){
+     //   System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
+       //         this.quantity + ", " + "Sale Total:" + (this.itemSold.getPricePaid()));
         
-        return ("");
-    }
+        //return ("");
+    //}
     public String toString() {
-    	return itemSold + " x " + quantity + " @ " + price + " // " + customer + " " + date; 
+    	return "test"; 
     }
     
 }

@@ -63,43 +63,43 @@ public class Project {
                 vendorCount++;
                 //int id, int count, String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor
                 //pre populate Item objects
-                inventory[0] = new Item(2000, 1000, "Screws", 1.0, "Long neck Screws", 
+                inventory[0] = new Item(1000, "Screws", 1.0, "Long neck Screws", 
                 5.0, 10.0, vendors[0]);
                 itemCount++;
-                inventory[1] = new Item(2001, 300, "Hammers", 13.0, "Iron Hammers", 
+                inventory[1] = new Item(300, "Hammers", 13.0, "Iron Hammers", 
                 30.0, 10.0, vendors[1]);
                 itemCount++;
-                inventory[2] = new Item(2002, 50, "Laptops", 20.0, "Sony Laptop", 
+                inventory[2] = new Item(50, "Laptops", 20.0, "Sony Laptop", 
                 300.0, 10.0, vendors[2]);
                 itemCount++;
-                inventory[3] = new Item(2003, 120, "Drywall", 1.0, "liquid for drywall", 
+                inventory[3] = new Item(120, "Drywall", 1.0, "liquid for drywall", 
                 15.0, 10.0, vendors[0]);
                 itemCount++;
-                inventory[4] = new Item(2004, 115, "Cement", 13.0, "chalk for creating cement", 
+                inventory[4] = new Item(115, "Cement", 13.0, "chalk for creating cement", 
                 20.0, 10.0, vendors[0]);
                 itemCount++;
-                inventory[5] = new Item(2005, 500, "Short Screws", 1.0, "Short neck Screws", 
+                inventory[5] = new Item(500, "Short Screws", 1.0, "Short neck Screws", 
                 5.0, 10.0, vendors[1]);
                 itemCount++;
-                inventory[6] = new Item(2006, 20, "Nails", .5, "Long neck Nails", 
+                inventory[6] = new Item(20, "Nails", .5, "Long neck Nails", 
                 3.0, 10.0, vendors[0]);
                 itemCount++;
-                inventory[7] = new Item(2007, 10, "TV", 40.0, "Sony TV", 
+                inventory[7] = new Item(10, "TV", 40.0, "Sony TV", 
                 450.0, 10.0, vendors[2]);
                 itemCount++;
-                inventory[8] = new Item(2008, 75, "MousePad", 1.0, "Sony Mousepad", 
+                inventory[8] = new Item(75, "MousePad", 1.0, "Sony Mousepad", 
                 10.0, 10.0, vendors[2]);
                 itemCount++;
-                inventory[9] = new Item(2009, 400, "2x4 wood block", 13.0, "2x4 plywood blocks", 
+                inventory[9] = new Item(400, "2x4 wood block", 13.0, "2x4 plywood blocks", 
                 7.0, 10.0, vendors[1]);
                 itemCount++;
                 
                 contractorData[0] = new Contractor("Steven", "Strange", 9874441295L, "sstrangemd@fastmail.com", 1,"Stranger Things", "1 Infinite Loop");
-    		 contractorCount++;
+                contractorCount++;
                 
-		//int[][] salesData = new int[3][1000]; //0=Sale ID, 1= Item ID, 2=Quantity
-		
-                
+    		 //sales[0] = new Sale(inventory[9], 100, "November 16", customerData[3], inventory[9].getPricePaid());
+             //saleCount++;   
+    		 
 		while(true) {
         
         int select;
@@ -342,7 +342,7 @@ listContractors(contractorCount, contractorData);
     	        
     	        int vendorID = nextInt("Vendor ID?");
     	        
-    	        inventory[temp] = new Item(itemCount, inv, itemName, weight, description, 
+    	        inventory[temp] = new Item( inv, itemName, weight, description, 
     	        salePrice, pricePaid, vendors[vendorID]);
     	        
     	        itemCount++;
@@ -407,12 +407,19 @@ listItems(itemCount, inventory);
       case 5:
             int id4 = saleCount - 3000;
             
+            int[][] staging = new int[2][1000];
             
+           /*
+            * list customers
+            * how many unique items are being purchased?
+            * list items
+            * quantity of each item
+            * check quantity
+            * date
+            * calculate price
+            */
             
-            //sales[id4] = new Sale;
-    	  /*
-    	   * ENTER SALE (AKRAM)
-    	   */
+           
     	  
     	  break; 
       case 6:

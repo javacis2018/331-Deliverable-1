@@ -10,7 +10,7 @@
  */
 public class Item {
 	
-int id;
+//int id;
 int count;
 String itemName;
 double weight;
@@ -19,9 +19,9 @@ private double salePrice;
 private double pricePaid;
 Vendor vendor;
 
-public Item (int id, int count, String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor) {
+public Item (int count, String itemName, double weight, String description, double salePrice, double pricePaid, Vendor vendor) {
 	
-	this.id = id;
+	//this.id = id;
 	this.count = count;
 	this.itemName = itemName;
 	this.weight = weight;
