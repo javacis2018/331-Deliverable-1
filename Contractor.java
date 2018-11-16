@@ -1,4 +1,14 @@
-
+/**
+ * CIS 331 Group Project
+ * 
+ * @author Tyler Davis
+ * @author Christopher Kang
+ * @author Jeremy Snyder
+ * @author Akram Choukri
+ * 
+ * Contractor - This class extends Customer and adds additional information
+ * for contractor objects.
+ */
 
 public class Contractor extends Customer {
 
