@@ -364,32 +364,32 @@ public class Project {
           
       case 3:
     	  
-    	  /*
-    	   * CREATE ITEM (TYLER)
-    	   */
-    	  
-    	    int temp = itemCount - 4000;
+    	    int temp = itemCount - 2000;
     	    
     	    for (int i = 0; i < inventory.length; i++)
     	    {
-    	        System.out.print("Please enter item name: ");  
-    	        String itemName = input.nextLine();
-    	        System.out.print("Please enter item weight: ");
+    	        
+    	        String itemName = nextLine("Item Name?");  
+    	        System.out.print("Item Weight?");
     	        double weight = input.nextDouble();
-    	        System.out.print("Please enter item description: ");
-    	        String description = input.nextLine();
-    	        System.out.print("Please enter sales price of item (e.g $99.99): ");
+    	        String description = nextLine("Item Description?");  
+    	        System.out.print("Sale Price? (e.g. 99.99)");
     	        double salePrice = input.nextDouble();
-    	        System.out.print("Please enter price paid for item (e.g $50.00): ");
+    	        System.out.print("Price Paid? (e.g. 99.99");
     	        double pricePaid = input.nextDouble();
-    	        System.out.print("Please enter item vendor: ");
-    	        //Vendor vendor = input.nextLine();
-    	        /*
-    	        inventory[temp] = new Item(String itemName, double weight, String description, 
-    	        double salePrice, double pricePaid, Vendor vendor)
+    	        System.out.println("How many in inventory?");
+    	        int inv = input.nextInt();
+    	        input.nextLine();
+    	        //LIST AVAILABLE VENDORS HERE
+    	        System.out.print("Vendor ID?");
+    	        int vendorID = input.nextInt();
+    	        input.nextLine();
+    	        
+    	        inventory[temp] = new Item(itemCount, inv, itemName, weight, description, 
+    	        salePrice, pricePaid, vendors[vendorID]);
     	        
     	        itemCount++;
-    	*/
+    	
     	    }   
     	  
     	break;
