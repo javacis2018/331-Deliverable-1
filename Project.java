@@ -483,6 +483,28 @@ public class Project {
 		  }
           
       case 9:
+    	  System.out.println("Select Report to view:");
+		  System.out.println("1. Purchase History (Customer)");
+		  System.out.println("2. Purchase History (Item)");
+		  System.out.println("3. Current Inventory Levels");
+		  
+		  int select4 = nextInt("");
+		  
+		  switch(select4) {
+		  
+		  case 1:
+			  
+			  break;
+		  case 2:
+			  
+			  break;
+		  case 3:
+			  
+			  break;
+			  default: System.out.println("Invalid input, try again.");
+		  
+		  }
+    	  
     	  //Purchase History for any given Customer (both types). This should show Items,
             //quantities, total purchase cost, and dates for the Customer. 
     	  /*
