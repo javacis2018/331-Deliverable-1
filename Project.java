@@ -497,6 +497,24 @@ public class Project {
 			  break;
 		  case 2:
 			  
+			        int itemHistCount = 2000;
+			        while (itemHistCount <= itemCount)
+			            
+			            System.out.print(inventory[itemHistCount].itemName + "\t");
+			            
+			            for (int q = 0; q < sales.length; q++)
+			            {
+			                if (sales[q].itemSold.itemName.equals(inventory[itemHistCount].itemName))
+			                {
+			                    System.out.print(sales[q].customer.firstName + " " + sales[q].customer.lastName 
+			                    	+ "\t" + 
+			                            sales[q].date + "\t" + sales[q].quantity);
+			                    
+			                    System.out.println();
+			                    System.out.print("\t");
+			                }
+			            }
+			   	
 			  break;
 		  case 3:
 			  
@@ -649,23 +667,6 @@ public class Project {
     */
 	
 	/*
-	public static void itemHistory()
-   	{
-        itemHistCount = 2000;
-        while (itemHistCount <= itemCount)
-            
-            System.out.print(inventory[itemHistCount].itemName + "\t")
-            
-            for (int = 0; saleArray.length; i++)
-            {
-                if (saleArray[i].itemName = inventory[itemHistCount].itemName)
-                {
-                    System.out.print(saleArray[i].custName + "\t" + 
-                            saleArray[i].date + "\t" + saleArray[i].quantity);
-                    
-                    System.out.println();
-                    System.out.print("\t");
-                }
-            }
+	
     	*/   
 }
