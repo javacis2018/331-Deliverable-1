@@ -34,6 +34,8 @@ public class Sale {
         
         return ("");
     }
-    
+    public String toString() {
+    	return itemSold + " x " + quantity + " @ " + price + " // " + customer + " " + date; 
+    }
     
 }

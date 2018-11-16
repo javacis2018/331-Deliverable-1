@@ -69,7 +69,7 @@ public String getAddress()
 }
 
 public String toString() {
-	return "test";
+	return custID + "//" + firstName + " " + lastName;
 }
 
 
