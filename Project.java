@@ -539,10 +539,10 @@ public class Project {
     	  //CURRENT INVENTORY LEVELS ~ Half Psuedo/Half Technical Code (Method to be moved outside main later)
 	/*
 		public static void Inventory Report() {
-			for ( int x = 0; x < itemArray.length; x++)
+			for ( int x = 0; x < inventory.length; x++)
         		{
-          		System.out.print(itemArray[~Location of Name]+": ");
-          		System.out.print(itemArray[~Location of Stock]);
+          		System.out.print(inventory[~Location of Name]+": ");
+          		System.out.print(inventory[~Location of Stock]);
                 	 }
        			System.out.println();
 		}
