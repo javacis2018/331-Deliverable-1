@@ -434,7 +434,7 @@ listItems(itemCount, inventory);
             		}
             	}
             }
-            	String date = nextLine("Date?");
+            	String date = nextLine("Transaction Date?");
             	
             	double total = 0;
             	
@@ -525,7 +525,7 @@ listItems(itemCount, inventory);
 			  
 			  break;
 		  case 2:
-			  
+			  /*
 			        int itemHistCount = 2000;
 			        while (itemHistCount <= itemCount)
 			            
@@ -543,7 +543,7 @@ listItems(itemCount, inventory);
 			                    System.out.print("\t");
 			                }
 			            }
-			   	
+			   	*/
 			  break;
 		  case 3:
 			  /*
