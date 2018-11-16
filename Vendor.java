@@ -33,6 +33,6 @@ public class Vendor {
     }
     
     public String toString() {
-    	return vID + " " + vName +" // " + vAddy + " " + vPhone; 
+    	return vID + " " + vName +" // " + vAddy + " // " + vPhone; 
     }
 }

@@ -143,20 +143,8 @@ public class Project {
     		  String lastName = nextLine("Last Name?");
     		  String address = nextLine("Address?");
     		  
-    		  boolean isValid = true;
-    		  while(isValid) {
-    			  
-    		  System.out.println("Phone Number?");
-    		  phone = input.nextLong();
-    		  input.nextLine();
+    		  phone = phoneNumber();
     		  
-    		  if(phone >= 1000000000 && phone <= 9999999999L) {
-    			  isValid = false;
-    		  } else {
-    			  System.out.println("Invalid input, try again.");
-    		  }
-    		  
-    		  }
     		  String email = nextLine("Email Address?");
     		  
     		  customerData[id] = new Customer(firstName, lastName, address,
@@ -201,20 +189,7 @@ public class Project {
     		  int cnum = input.nextInt();
     		  input.nextLine();
     		  
-    		  boolean isValid2 = true;
-    		  while(isValid2) {
-    			  
-    		  System.out.println("Phone Number?");
-    		  phone2 = input.nextLong();
-    		  input.nextLine();
-    		  
-    		  if(phone2 >= 1000000000 && phone2 <= 9999999999L) {
-    			  isValid2 = false;
-    		  } else {
-    			  System.out.println("Invalid input, try again.");
-    		  }
-    		  
-    		  }
+    		  phone2 = phoneNumber();
     		  String email2 = nextLine("Email Address?");
     		  
     		  contractorData[id2] = new Contractor(firstName2, lastName2, phone2, email2, cnum,busName, address2);
@@ -290,8 +265,8 @@ public class Project {
     			  customerData[cuID].address = input.nextLine();
     			  break;
     		  case 4:
-    			  customerData[cuID].phoneNumber = input.nextLong();
-    			  input.nextLine();
+    			  customerData[cuID].phoneNumber = phoneNumber();
+    			  
     			  break;
     		  case 5:
     			  customerData[cuID].emailAddress = input.nextLine();
@@ -339,7 +314,7 @@ public class Project {
     			  contractorData[cuID2].address = input.nextLine();
     			  break;
     		  case 4:
-    			  contractorData[cuID2].phoneNumber = input.nextLong();
+    			  contractorData[cuID2].phoneNumber = phoneNumber();
     			  input.nextLine();
     			  break;
     		  case 5:
@@ -456,7 +431,6 @@ public class Project {
   	        int vendorID = input.nextInt();
   	        input.nextLine();
   	        
-			  //inventory[cuID3].vendor = input.nextInt();
 			  break;
 		  
 		  }
@@ -487,8 +461,7 @@ public class Project {
     		  
        String vName = nextLine("Vendor Name?");
        String vAddy = nextLine("Vendor Address?");  	  
-       System.out.println("Phone Number?");
-       long vPhone = input.nextLong();
+      long vPhone = phoneNumber();
         
         vendors[vID] = new Vendor(vName, vAddy, vPhone);
         vendorCount++;
@@ -526,8 +499,7 @@ public class Project {
 			  vendors[cuID4-4000].vAddy = input.nextLine();
 			  break;
 		  case 3:
-			  vendors[cuID4-4000].vPhone = input.nextLong();
-			  input.nextLine();
+			  vendors[cuID4-4000].vPhone = phoneNumber();
 			  break;
 			  default:
 				  System.out.println("Unexpected Input.");
@@ -570,6 +542,38 @@ public class Project {
 		}
     }
 
+	public static String isNotBlank() {
+		boolean notValid2 = true;
+		String output = "";
+		
+		while(notValid2) {
+			output = input.nextLine();
+			if (output.length() > 0) {
+				notValid2 = false;
+			} else {
+				System.out.println("Invalid input, try again.");
+			}
+		}
+		return output;
+	}
+	
+	  public static long phoneNumber() {
+	   boolean notValid=true;
+	    long phone0 = 0; 
+	    while(notValid) {
+	    	System.out.println("Phone Number?");
+	    	phone0 = input.nextLong();
+	    	input.nextLine();
+	    if(phone0 >= 1000000000 && phone0 <= 9999999999L) {
+		 notValid = false;
+	  } else {
+		  System.out.println("Invalid input, try again.");
+	   
+	  }
+	    }
+	    
+	    return phone0;
+	    }
 	
 	public static String nextLine(String display) {
 		System.out.println(display);
