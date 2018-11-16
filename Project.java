@@ -445,7 +445,7 @@ listItems(itemCount, inventory);
             		total += (inventory[itemCache[y]].getSalePrice() * itemQty[y]);      	
             			}
             
-            sales[id4] = new Sale(itemCache, itemQty, date, customerData[cust]);
+            sales[id4] = new Sale(itemCache, itemQty, unique, date, total, customerData[cust]);
             
             		saleCount++;
             
