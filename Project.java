@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  * CIS 331 Group Project
@@ -293,7 +292,7 @@ public class Project {
     		  System.out.println("7. Business Name");
     		  
     		  int editID2 = nextInt("");
-    		  System.out.println("Enter new data");
+    		  System.out.println("Enter new data:");
     		  
     		  switch(editID2) {
     		  
@@ -308,7 +307,6 @@ public class Project {
     			  break;
     		  case 4:
     			  contractorData[cuID2].phoneNumber = phoneNumber();
-    			  input.nextLine();
     			  break;
     		  case 5:
     			  contractorData[cuID2].emailAddress = input.nextLine();
@@ -336,23 +334,18 @@ public class Project {
     	    for (int i = 0; i < inventory.length; i++)
     	    {
     	        
-    	        String itemName = nextLine("Item Name?");  
-    	        System.out.print("Item Weight?");
-    	        double weight = input.nextDouble();
-    	        String description = nextLine("Item Description?");  
-    	        System.out.print("Sale Price? (e.g. 99.99)");
-    	        double salePrice = input.nextDouble();
-    	        System.out.print("Price Paid? (e.g. 99.99");
-    	        double pricePaid = input.nextDouble();
-    	        System.out.println("How many in inventory?");
-    	        int inv = nextInt("");
+    	        String itemName = nextLine("Item Name?");
+    	        double weight = nextDouble("Item Weight?");
+    	        String description = nextLine("Item Description?");
+    	        double salePrice = nextDouble("Sale Price? (e.g. 9.99)");
+    	        double pricePaid = nextDouble("Price Paid? (e.g. 9.99)");
+    	        int inv = nextInt("How many in inventory?");
     	        //LIST AVAILABLE VENDORS HERE
     	        for(int r = 0; r < (vendorCount - 4000); r++) {
     	        	System.out.println(vendors[r].toString());
     	        }
     	        
-    	        System.out.print("Vendor ID?");
-    	        int vendorID = nextInt("");
+    	        int vendorID = nextInt("Vendor ID?");
     	        
     	        inventory[temp] = new Item(itemCount, inv, itemName, weight, description, 
     	        salePrice, pricePaid, vendors[vendorID]);
@@ -394,19 +387,17 @@ public class Project {
 			  inventory[cuID3].itemName = input.nextLine();
 			  break;
 		  case 3:
-			  inventory[cuID3].weight = input.nextDouble();
-			  input.nextLine();
+			  inventory[cuID3].weight = nextDouble("");
 			  break;
 		  case 4:
 			  inventory[cuID3].description = input.nextLine();
 			  break;
 		  case 5:
-			  inventory[cuID3].setSalePrice(input.nextDouble());
+			  inventory[cuID3].setSalePrice(nextDouble(""));
 			  input.nextLine();
 			  break;
 		  case 6:
-			  inventory[cuID3].setPricePaid(input.nextDouble());
-			  input.nextLine();
+			  inventory[cuID3].setPricePaid(nextDouble(""));
 			  break;
 		  case 7:
 			  
@@ -582,6 +573,28 @@ public class Project {
 		}
 
 		return output2;
+	}
+	
+	public static double nextDouble(String display) {
+		boolean notValid4 = true;
+		double output3 = 0;
+		String stagingArea2 = "";
+		System.out.println(display);
+		
+		while(notValid4) {
+			
+			stagingArea2 = input.nextLine();
+			
+			try {
+				output3 = Double.parseDouble(stagingArea2);
+				notValid4 = false;
+			} catch (Exception e) {
+				System.out.println("Invalid input, try again.");
+			}
+			
+		}
+
+		return output3;
 	}
    
     /*public static void printInventory(Item[] inventory)
