@@ -428,6 +428,9 @@ listItems(itemCount, inventory);
             	while(isValid4) {
             		itemQty[t] = nextInt("Quantity?");
             		if (itemQty[t] <= limit) {
+            			
+            			inventory[temp9].decrementCount(itemQty[t]);
+            			
             			isValid4 = false;
             		} else {
             			System.out.println("Insufficient stock, try again.");
@@ -443,6 +446,7 @@ listItems(itemCount, inventory);
             			}
             
             sales[id4] = new Sale(itemCache, itemQty, date, customerData[cust]);
+            
             		saleCount++;
             
            /*

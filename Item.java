@@ -47,12 +47,12 @@ public void setPricePaid(double pricePaid) {
 	this.pricePaid = pricePaid;
 }
 
-public void decrementCount() {
-	count--;
+public void decrementCount(int d) {
+	count -= d;
 }
 
-public void incrementCount() {
-	count++;
+public void incrementCount(int e) {
+	count += e;
 }
     public String toString()
     {
