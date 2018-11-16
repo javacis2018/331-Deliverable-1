@@ -543,5 +543,33 @@ public class Project {
 		return input.nextLine();
 	}
         
-  //create item method moved to main method.
+   
+    /*public static void printInventory(Item[] inventory)
+    {
+    System.out.println("Current Inventory Levels\n" + "---------------------")
+    
+    for (int i = 0; i < inventory.length; i++)
+    {
+        inventory[i] 
+    
+    
+    }
+    }
+    */
+    
+    /*public static void custPurchaseHistory(Sale[] sales)
+    {
+    
+    for (int i = 0; i < saleCount - 300; i++)
+    {
+        System.out.println("Customer: " + sales[i].customer + ", " + 
+        "Item(s) Sold: " + sales[i].itemSold + ", " + "Quantities: " + 
+        sales[i].quantity + ", " + "Total Purchase Cost: " + 
+        sales[i].getPricePaid() + ", " + "Date: " + sales[i].date));
+    
+    }
+    System.out.println();
+    }
+    */
+   
 }

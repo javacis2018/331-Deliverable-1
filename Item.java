@@ -55,5 +55,8 @@ public void decrementCount() {
 public void incrementCount() {
 	count++;
 }
-
+    public String toString()
+    {
+        return "test";
+    }
 }
