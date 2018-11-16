@@ -34,10 +34,10 @@ public class Sale {
         
         //return ("");
     //}
-    public String toString(){
-        String salesString = new String("");
-        salesString += //item + " " + saleID + " " + quantity + " " + date + " " + custID + " " + price;
-        return saleString;
+    //public String toString(){
+        //String salesString = new String("");
+       // salesString += //item + " " + saleID + " " + quantity + " " + date + " " + custID + " " + price;
+       // return saleString;
     }
     
 }
