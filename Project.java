@@ -1,6 +1,13 @@
 import java.util.Scanner;
 /**
+ * CIS 331 Group Project
  * 
+ * @author Tyler Davis
+ * @author Christopher Kang
+ * @author Jeremy Snyder
+ * @author Akram Choukri
+ * 
+ * Project - This file stores most of the core logic for this application.
  */
 
 public class Project {
@@ -302,7 +309,7 @@ public class Project {
     		  System.out.println("Pick a customer to edit:");
     		  for(int i = 0; i < customerCount; i++) {
     			  Customer temp = customerData[i];
-    			  System.out.println("ID: "+i+" // "+customerData.toString());
+    			  System.out.println("ID: "+i+" // "+customerData.toString()); //FIX TO STRING
     		  }
     		  int cuID2 = input.nextInt();
     		  input.nextLine();
