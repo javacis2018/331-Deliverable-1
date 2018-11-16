@@ -32,4 +32,7 @@ public class Vendor {
         this.vPhone = vPhone;
     }
     
+    public String toString() {
+    	return vID + " " + vName +" // " + vAddy + " " + vPhone; 
+    }
 }
