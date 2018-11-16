@@ -510,7 +510,10 @@ listItems(itemCount, inventory);
 			   	
 			  break;
 		  case 3:
-			  
+			  System.out.println("Item Name\tQuantity");
+                          for(int i = 0; i<inventory.length;i++)
+                              System.out.println(),
+                                      inventory[i].itemName, inventory[i].quantity);
 			  break;
 			  default: System.out.println("Invalid input, try again.");
 		  
