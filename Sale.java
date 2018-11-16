@@ -10,12 +10,15 @@
  */
 
 public class Sale {
-	public int[][] saleData;
+    public int[][] saleData;
     public String date;
     public Customer customer;
+    private double price;
+    public int saleID;
+    public int customerID;
     
     
-    public Sale(int[][] saleData, String date, Customer customer){
+    public Sale(int[][] saleData, String date, Customer customer, double price){
         
     	for(int i=0; i<saleData.length; i++) //1st var is item, 2nd var is qty
     		  for(int j=0; j<saleData[i].length; j++)
@@ -23,7 +26,7 @@ public class Sale {
     	
         this.date = date;
         this.customer = customer ;
-        
+        this.price = price;
     }
    // public String describeSale(){
      //   System.out.printf("Item Sold:" + this.itemSold.itemName + ", " + "Price: $" + this.itemSold.getSalePrice() + ", " +  "Quanitity:" + 
@@ -31,8 +34,10 @@ public class Sale {
         
         //return ("");
     //}
-    public String toString() {
-    	return "test"; 
+    //public String toString(){
+        //String salesString = new String("");
+       // salesString += //item + " " + saleID + " " + quantity + " " + date + " " + custID + " " + price;
+       // return saleString;
     }
     
 }
