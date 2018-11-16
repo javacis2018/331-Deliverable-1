@@ -1,3 +1,14 @@
+/**
+ * CIS 331 Group Project
+ * 
+ * @author Tyler Davis
+ * @author Christopher Kang
+ * @author Jeremy Snyder
+ * @author Akram Choukri
+ * 
+ * Vendor - This handles Vendor objects that provide Items for sale.
+ */
+
 public class Vendor {
     
     // Vendor Variables

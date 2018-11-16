@@ -1,7 +1,12 @@
-/*
+/**
+ * CIS 331 Group Project
+ * 
+ * @author Tyler Davis
  * @author Christopher Kang
- * @version 11 November 2018
- * Modified for the Group Project
+ * @author Jeremy Snyder
+ * @author Akram Choukri
+ * 
+ * Item - This class defines Items that the system can sell to Customers.
  */
 public class Item {
 	

@@ -1,8 +1,13 @@
-/*
+/**
+ * CIS 331 Group Project
+ * 
+ * @author Tyler Davis
+ * @author Christopher Kang
+ * @author Jeremy Snyder
  * @author Akram Choukri
- * @version 11 November 2018
- * Modified for the Group Project
-*/
+ * 
+ * Sale - This class defines individual Sales.
+ */
 
 public class Sale {
     public static Item itemSold;
