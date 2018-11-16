@@ -94,6 +94,9 @@ public class Project {
                 7.0, 10.0, vendors[1]);
                 itemCount++;
                 
+                contractorData[0] = new Contractor("Steven", "Strange", 9874441295L, "sstrangemd@fastmail.com", 1,"Stranger Things", "1 Infinite Loop");
+    		 contractorCount++;
+                
 		//int[][] salesData = new int[3][1000]; //0=Sale ID, 1= Item ID, 2=Quantity
 		
                 
@@ -285,7 +288,7 @@ listContractors(contractorCount, contractorData);
     		  
     		  int editID2 = nextInt("");
     		  System.out.println("Enter new data:");
-    		  
+    		  cuID2 -= 1000;
     		  switch(editID2) {
     		  
     		  case 1:
