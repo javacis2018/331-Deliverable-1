@@ -106,7 +106,7 @@ public class Project {
                 int itemC4[] = {2008};
                 int itemQ4[] = {3};
                 
-    		 sales[0] = new Sale(itemC0, itemQ0, 2, "December 12, 1996", 135.00, customerData[3]);
+             sales[0] = new Sale(itemC0, itemQ0, 2, "December 12, 1996", 135.00, customerData[3]);
              saleCount++;
              sales[1] = new Sale(itemC1, itemQ1, 3, "September 12, 2014", 224.00, customerData[0]);
              saleCount++;   
@@ -745,7 +745,7 @@ listItems(itemCount, inventory);
     {
         System.out.println("Customer: " + sales[i].customer + ", " + 
         "Item(s) Sold: " + sales[i].itemSold + ", " + "Quantities: " + 
-        sales[i].quantity + ", " + "Total Purchase Cost: " + 
+        sales[i].itemQty + ", " + "Total Purchase Cost: " + 
         sales[i].getPricePaid() + ", " + "Date: " + sales[i].date));
     
     }

@@ -24,6 +24,9 @@ public class Sale {
     		  for(int j=0; j<saleData[i].length; j++)
     		    saleData[i][j]=this.saleData[i][j];
     	*/
+        this.itemCache = new int[unique];
+        this.itemQty = new int[unique];
+        
     	for(int i = 0; i < itemCache.length; i++) {
     		this.itemCache[i] = itemCache[i];
     	}
