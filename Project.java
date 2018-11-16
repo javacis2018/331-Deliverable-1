@@ -483,15 +483,15 @@ public class Project {
     	  
       case 7:
     	  
-    	//int vID = vendorCount - 4000;
+    	int vID = vendorCount - 4000;
     		  
-       // String vName = nextLine("Vendor Name?");
-       // String vAddy = nextLine("Vendor Address?");  	  
-       // System.out.println("Phone Number?");
-       // long vPhone = input.nextLong();
+       String vName = nextLine("Vendor Name?");
+       String vAddy = nextLine("Vendor Address?");  	  
+       System.out.println("Phone Number?");
+       long vPhone = input.nextLong();
         
-        //vendors[vID] = new Vendor(vName, vAddy, vPhone);
-        //vendorCount++;
+        vendors[vID] = new Vendor(vName, vAddy, vPhone);
+        vendorCount++;
     	  break;
     	  
       case 8:
@@ -499,7 +499,40 @@ public class Project {
     	  /*
     	   * EDIT VENDOR
     	   */
-    	  break;
+    	  
+    	  System.out.println("Pick vendor to edit:");
+		  for(int z = 0; z < vendorCount-4000; z++) {
+			  Vendor temp4 = vendors[z];
+			  System.out.println("ID: "+(z+4000)+" // "+temp4.toString()); //FIX TO STRING
+		  }
+		  int cuID4 = input.nextInt();
+		  input.nextLine();
+		  
+		  System.out.println("Select Field to Edit");
+		  System.out.println("1. Name");
+		  System.out.println("2. Address");
+		  System.out.println("3. Phone Number");
+		  
+		  int editID4 = input.nextInt();
+		  input.nextLine();
+		  System.out.println("Enter new data");
+		  
+		  switch(editID4) {
+		  
+		  case 1:
+			  vendors[cuID4].vName = input.nextLine();
+			  break;
+		  case 2:
+			  vendors[cuID4].vAddy = input.nextLine();
+			  break;
+		  case 3:
+			  vendors[cuID4].vPhone = input.nextLong();
+			  input.nextLine();
+			  break;
+			  default:
+				  System.out.println("Unexpected Input.");
+		  break;
+		  }
           
       case 9:
     	  //Purchase History for any given Customer (both types). This should show Items,
