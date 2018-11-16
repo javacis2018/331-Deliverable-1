@@ -520,13 +520,13 @@ public class Project {
 		  switch(editID4) {
 		  
 		  case 1:
-			  vendors[cuID4].vName = input.nextLine();
+			  vendors[cuID4-4000].vName = input.nextLine();
 			  break;
 		  case 2:
-			  vendors[cuID4].vAddy = input.nextLine();
+			  vendors[cuID4-4000].vAddy = input.nextLine();
 			  break;
 		  case 3:
-			  vendors[cuID4].vPhone = input.nextLong();
+			  vendors[cuID4-4000].vPhone = input.nextLong();
 			  input.nextLine();
 			  break;
 			  default:
