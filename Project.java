@@ -306,10 +306,10 @@ public class Project {
     		   * EDIT CONTRACTOR
     		   */
     		  
-    		  System.out.println("Pick a customer to edit:");
-    		  for(int i = 0; i < customerCount; i++) {
-    			  Customer temp = customerData[i];
-    			  System.out.println("ID: "+i+" // "+customerData.toString()); //FIX TO STRING
+    		  System.out.println("Pick a contractor to edit:");
+    		  for(int i = 0; i < contractorCount; i++) {
+    			  Contractor temp2 = contractorData[i];
+    			  System.out.println("ID: "+i+" // "+temp2.toString()); //FIX TO STRING
     		  }
     		  int cuID2 = input.nextInt();
     		  input.nextLine();
@@ -381,6 +381,10 @@ public class Project {
     	        int inv = input.nextInt();
     	        input.nextLine();
     	        //LIST AVAILABLE VENDORS HERE
+    	        for(int r = 0; r < (vendorCount - 4000); r++) {
+    	        	System.out.println(vendors[r].toString());
+    	        }
+    	        
     	        System.out.print("Vendor ID?");
     	        int vendorID = input.nextInt();
     	        input.nextLine();
@@ -395,10 +399,68 @@ public class Project {
     	break;
     		  
       case 4:
-    	  
-    	  /*
-    	   * EDIT ITEM
-    	   */
+    	  //EDIT ITEM
+
+		  System.out.println("Pick an item to edit:");
+		  for(int i = 0; i < itemCount; i++) {
+			  Item temp3 = inventory[i];
+			  System.out.println("ID: "+i+" // "+temp3.toString()); //FIX TO STRING
+		  }
+		  int cuID3 = input.nextInt();
+		  input.nextLine();
+		  
+		  /*
+int count;
+String itemName;
+double weight;
+String description;
+private double salePrice;
+private double pricePaid;
+Vendor vendor;
+		   */
+		  
+		  System.out.println("Select Field to Edit");
+		  System.out.println("1. Quantity Available");
+		  System.out.println("2. Item Name");
+		  System.out.println("3. Weight");
+		  System.out.println("4. Description");
+		  System.out.println("5. Sale Price");
+		  System.out.println("6. Price Paid");
+		  System.out.println("7. Vendor");
+		  
+		  int editID3 = input.nextInt();
+		  input.nextLine();
+		  System.out.println("Enter new data");
+		  
+		  switch(editID3) {
+		  
+		  case 1:
+			  inventory[cuID3].count = input.nextInt();
+			  input.nextLine();
+			  break;
+		  case 2:
+			  inventory[cuID3].itemName = input.nextLine();
+			  break;
+		  case 3:
+			  inventory[cuID3].weight = input.nextDouble();
+			  input.nextLine();
+			  break;
+		  case 4:
+			  inventory[cuID3].description = input.nextLine();
+			  break;
+		  case 5:
+			  inventory[cuID3].setSalePrice(input.nextDouble());
+			  input.nextLine();
+			  break;
+		  case 6:
+			  inventory[cuID3].setPricePaid(input.nextDouble());
+			  input.nextLine();
+			  break;
+		  case 7:
+			  inventory[cuID3].businessName = input.nextLine();
+			  break;
+		  
+		  }
     	  
     	  break;
       case 5:
