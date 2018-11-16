@@ -231,12 +231,7 @@ public class Project {
     		  /*
     		   * EDIT CUSTOMER
     		   */
-    		  
-    		  System.out.println("Pick a customer to edit:");
-    		  for(int i = 0; i < customerCount; i++) {
-    			  Customer temp = customerData[i];
-    			  System.out.println("ID: "+i+" // "+customerData.toString());
-    		  }
+    		  listCustomers(customerCount, customerData);
     		  int cuID = nextInt("");
     		  
     		  System.out.println("Select Field to Edit");
@@ -276,11 +271,7 @@ public class Project {
     		   * EDIT CONTRACTOR
     		   */
     		  
-    		  System.out.println("Pick a contractor to edit:");
-    		  for(int i = 0; i < contractorCount-1000; i++) {
-    			  Contractor temp2 = contractorData[i];
-    			  System.out.println("ID: "+(i+1000)+" // "+temp2.toString()); //FIX TO STRING
-    		  }
+listContractors(contractorCount, contractorData);
     		  int cuID2 = nextInt("");
     		  
     		  System.out.println("Select Field to Edit");
@@ -360,11 +351,7 @@ public class Project {
       case 4:
     	  //EDIT ITEM
 
-		  System.out.println("Pick an item to edit:");
-		  for(int i = 0; i < itemCount-2000; i++) {
-			  Item temp3 = inventory[i];
-			  System.out.println("ID: "+(i+2000)+" // "+temp3.toString()); //FIX TO STRING
-		  }
+listItems(itemCount, inventory);
 		  int cuID3 = nextInt("");
 		  
 		  System.out.println("Select Field to Edit");
@@ -382,23 +369,23 @@ public class Project {
 		  switch(editID3) {
 		  
 		  case 1:
-			  inventory[cuID3].count = nextInt("");
+			  inventory[cuID3-2000].count = nextInt("");
 			  break;
 		  case 2:
-			  inventory[cuID3].itemName = nextLine("");
+			  inventory[cuID3-2000].itemName = nextLine("");
 			  break;
 		  case 3:
-			  inventory[cuID3].weight = nextDouble("");
+			  inventory[cuID3-2000].weight = nextDouble("");
 			  break;
 		  case 4:
-			  inventory[cuID3].description = nextLine("");
+			  inventory[cuID3-2000].description = nextLine("");
 			  break;
 		  case 5:
-			  inventory[cuID3].setSalePrice(nextDouble(""));
+			  inventory[cuID3-2000].setSalePrice(nextDouble(""));
 			  input.nextLine();
 			  break;
 		  case 6:
-			  inventory[cuID3].setPricePaid(nextDouble(""));
+			  inventory[cuID3-2000].setPricePaid(nextDouble(""));
 			  break;
 		  case 7:
 			  
@@ -451,11 +438,7 @@ public class Project {
     	   * EDIT VENDOR
     	   */
     	  
-    	  System.out.println("Pick vendor to edit:");
-		  for(int z = 0; z < vendorCount-4000; z++) {
-			  Vendor temp4 = vendors[z];
-			  System.out.println("ID: "+(z+4000)+" // "+temp4.toString()); //FIX TO STRING
-		  }
+    	 listVendors(vendorCount, vendors);
 		  int cuID4 = nextInt("");
 		  
 		  System.out.println("Select Field to Edit");
@@ -558,6 +541,38 @@ public class Project {
 		}
     }
 
+	  public static void listCustomers(int customerCount, Customer[] customerData) {
+	  System.out.println("Pick a customer:");
+	  for(int i = 0; i < customerCount; i++) {
+		  Customer temp = customerData[i];
+		  System.out.println("ID: "+i+" // "+temp.toString());
+	  }
+	  }
+	  
+	  public static void listContractors(int contractorCount, Contractor[] contractorData) {
+		  System.out.println("Pick a contractor:");
+		  for(int i = 0; i < contractorCount-1000; i++) {
+			  Contractor temp2 = contractorData[i];
+			  System.out.println("ID: "+(i+1000)+" // "+temp2.toString());
+		  }
+	  }
+	  
+	  public static void listItems(int itemCount, Item[] inventory) {
+		  System.out.println("Pick an item:");
+		  for(int i = 0; i < itemCount-2000; i++) {
+			  Item temp3 = inventory[i];
+			  System.out.println("ID: "+(i+2000)+" // "+temp3.toString());
+		  }
+	  }
+	  
+	  public static void listVendors(int vendorCount, Vendor[] vendors) {
+		  System.out.println("Pick vendor to edit:");
+		  for(int z = 0; z < vendorCount-4000; z++) {
+			  Vendor temp4 = vendors[z];
+			  System.out.println("ID: "+(z+4000)+" // "+temp4.toString());
+		  }
+	  }
+	
 	  public static long phoneNumber() {
 	   boolean notValid=true;
 	    long phone0 = 0; 
