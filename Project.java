@@ -466,7 +466,7 @@ Vendor vendor;
   	        int vendorID = input.nextInt();
   	        input.nextLine();
   	        
-			  inventory[cuID3].vendor = input.nextInt();
+			  //inventory[cuID3].vendor = input.nextInt();
 			  break;
 		  
 		  }
