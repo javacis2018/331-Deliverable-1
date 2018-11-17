@@ -546,25 +546,44 @@ listItems(itemCount, inventory);
 			  
 			  break;
 		  case 2:
-			  /*
-			        int itemHistCount = 2000;
-			        while (itemHistCount <= itemCount)
-			            
-			            System.out.print(inventory[itemHistCount].itemName + "\t");
-			            
-			            for (int q = 0; q < sales.length; q++)
-			            {
-			                if (sales[q].itemSold.itemName.equals(inventory[itemHistCount].itemName))
-			                {
-			                    System.out.print(sales[q].customer.firstName + " " + sales[q].customer.lastName 
-			                    	+ "\t" + 
-			                            sales[q].date + "\t" + sales[q].quantity);
-			                    
-			                    System.out.println();
-			                    System.out.print("\t");
-			                }
-			            }
-			   	*/
+			  
+			  //PURCHASE HISTORY (ITEM)
+			  
+			  listItems(itemCount, inventory);
+			  
+			  String[] dates = new String[1000];
+			  String[] who = new String[1000];
+			  int[] much = new int[1000];
+			  
+			  int flag = 0;
+			  
+			  int select5 = nextInt("Select an item ID.");
+			  
+			  for (int q = 0; q < saleCount - 3000; q++) {
+				  Sale currentSale = sales[q];
+				  for (int w = 0; w < currentSale.unique; w++) {
+					
+					  if(select5 == currentSale.itemCache[w]) {
+						  
+						  dates[flag] = currentSale.date;
+						  
+						  who[flag] = currentSale.customer.firstName + " " + currentSale.customer.lastName;
+						  
+						  much[flag] = currentSale.itemQty[w];
+						  
+						  flag++;
+					  } //if
+					  
+				  } //for w
+
+			  } //for q
+			  
+			  for (int u = 0; u < flag; u++) {
+				  System.out.println(dates[u] + " // " + who[u] + " // QTY: " + much[u]);
+			  }
+			  
+			  System.out.println("Report complete.");
+			  
 			  break;
 		  case 3:
 			  /*
@@ -584,12 +603,6 @@ listItems(itemCount, inventory);
     	   * PURCHASE HISTORY FOR CUSTOMER (Akram)
     	   */
     	  
-          
-          
-          
-    	  /*
-    	   * PURCHASE HISTORY FOR ITEMS (Tyler)
-    	   */
     	  
     	  //CURRENT INVENTORY LEVELS ~ Half Psuedo/Half Technical Code (Method to be moved outside main later)
 	/*
@@ -691,7 +704,7 @@ listItems(itemCount, inventory);
 			
 			stagingArea = input.nextLine();
 			
-			try {
+			try { //NEEDS NEGATIVE PROTECTION
 				output2 = Integer.parseInt(stagingArea);
 				notValid3 = false;
 			} catch (Exception e) {
