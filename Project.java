@@ -544,12 +544,14 @@ listItems(itemCount, inventory);
 		  
 		  case 1:
 			  
+			  //List purchases by Customer
+			  
 			  int select5 = nextInt("1. Customer\n2.Contractor");
 			  
 			  switch(select5) {
 			  case 1:
 			  listCustomers(customerCount, customerData);
-        		  System.out.println("Which Customer is Making a Purchase");
+        		  System.out.println("Which Customer is Making a Purchase?");
         
         		  int customerChoice = input.nextInt();
         		  
@@ -565,18 +567,24 @@ listItems(itemCount, inventory);
     				  Sale currentSale = sales[q];
     				  
     				  if (customerData[customerChoice].toString().equals(sales[q].customer.toString())) {
-    					  date2[flag2] = sales[q].date;
-    					  total2[flag2] = sales[q].total;
+    					  date2[flag2] = currentSale.date;
+    					  total2[flag2] = currentSale.total;
     					  
-    					  for(int t = 0; t < sales[q].unique; t++) {
-    						  items[flag2].concat(itemCache[t]+"");
-    						  //BLAH BLAH
+    					  for(int t = 0; t < currentSale.unique; t++) {
+    						  items[flag2].concat("\n"+currentSale.itemCache[t]+" // " +currentSale.itemQty[t]);
+    						  
     					  }
+    					  flag2++;
     					  
     				  }
 
     			  } //for q
-        		  
+        		  System.out.println(customerData[customerChoice].firstName +" "+customerData[customerChoice].lastName);
+        		  for (int g = 0; g < flag2; g++) {
+        			  System.out.println(date2[flag2]);
+        			  System.out.println(total2[flag2]);
+        			  System.out.print(items[flag2]);
+        		  }
         		  
         		  /*System.out.println("Purchase Report For " + customerData[customerChoice].firstName);
 			  System.out.println("Item\tQuantity\tDate");
@@ -662,13 +670,13 @@ listItems(itemCount, inventory);
 			  
 			  break;
 		  case 3:
-			  /*
+			  
 			  System.out.println("Item Name\tQuantity");
                           for(int i = 0; i<inventory.length;i++)
-                              System.out.println(),
-                                      inventory[i].itemName, inventory[i].quantity);
+                              System.out.println(inventory[i].itemName+"\t"+inventory[i].count);
+                              
 			  break;
-			  */
+			  
 			  default: System.out.println("Invalid input, try again.");
 		  
 		  }
