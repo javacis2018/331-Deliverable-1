@@ -31,7 +31,7 @@ public class Sale {
     		this.itemCache[i] = itemCache[i];
     	}
     	for(int e = 0; e < itemQty.length; e++) {
-    		this.itemCache[e] = itemCache[e];
+    		this.itemQty[e] = itemQty[e];
     	}
     	
     	this.total = total;
