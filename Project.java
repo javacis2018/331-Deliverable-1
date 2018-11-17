@@ -43,13 +43,13 @@ public class Project {
 		
 
                 //prepopulate Customer objects
-                customerData[0] = new Customer("Bob", "Mcdaniels", 5712128900L, "BobM@yahoo.com");
+                customerData[0] = new Customer(0, "Bob", "McDaniels", "6969 Glenbarr Ave", 5712128900L, "BobM@yahoo.com");
                 customerCount++;
-                customerData[1] = new Customer("Jacob", "Thomas", 2388330048L, "JakeThomas@aol.com");
+                customerData[1] = new Customer(1, "Jacob", "Thomas", "55 Main St", 2388330048L, "JakeThomas@aol.com");
                 customerCount++;
-                customerData[2] = new Customer("Rachel", "Peterson", 5714712993L, "RachP@aol.com");
+                customerData[2] = new Customer(2, "Rachel", "Peterson", "420 Cool St", 5714712993L, "RachP@aol.com");
                 customerCount++;
-                customerData[3] = new Customer("Tyler", "Joseph", 3010229384L, "TylerJoseph@hotmail.com");
+                customerData[3] = new Customer(3, "Tyler", "Joseph","1 Infinite Loop", 3010229384L, "TylerJoseph@hotmail.com");
                 customerCount++;
                 //4 Customers, 10 Items, 3 Vendors, and 5 Sales. 
                 //pre populate vendor objects
@@ -92,7 +92,7 @@ public class Project {
                 7.0, 10.0, vendors[1]);
                 itemCount++;
                 
-                contractorData[0] = new Contractor("Steven", "Strange", 9874441295L, "sstrangemd@fastmail.com", 1,"Stranger Things", "1 Infinite Loop");
+                contractorData[0] = new Contractor("Steven", "Strange", 9874441295L, "sstrangemd@fastmail.com", 1,"Stranger Things", "2 Infinite Loop");
                 contractorCount++;
                 
                 int itemC0[] = {2000,2009};
@@ -165,7 +165,7 @@ public class Project {
     		  
     		  String email = nextLine("Email Address?");
     		  
-    		  customerData[id] = new Customer(firstName, lastName, address,
+    		  customerData[id] = new Customer(customerCount, firstName, lastName, address,
     			        phone, email);
     		  customerCount++;
     		  
