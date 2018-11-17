@@ -598,7 +598,7 @@ listItems(itemCount, inventory);
         			  
         			  listContractors(contractorCount, contractorData);
         			  int contractorChoice = nextInt("Which Contractor?");
-      
+      /*
         		  	  System.out.println("Purchase Report For " + contractorData[contractorChoice].firstName);
 			  	  System.out.println("Item\tQuantity\tDate");
 			  	  for (int i = 0; i < sales.length; i++)
@@ -613,7 +613,7 @@ listItems(itemCount, inventory);
         		 	  }
         
     		  	  break;
-		  
+		  */
         			  default:
         				  System.out.println("Unexpected Input.");
 			  break;
