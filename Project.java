@@ -555,7 +555,7 @@ listItems(itemCount, inventory);
         
         
         		  System.out.println("Purchase Report For " + customerData[customerChoice].firstName);
-			  System.out.println("Item\tQuantity\tDate")
+			  System.out.println("Item\tQuantity\tDate");
 			  for (int i = 0; i < sales.length; i++)
 			  {
           		  	if (sales[i].customerData == sales[customerChoice].customerData)
@@ -574,14 +574,14 @@ listItems(itemCount, inventory);
         			  listContractors(contractorCount, contractorData);
         			  int contractorChoice = nextInt("Which Contractor?");
         
-        		  	  int customerChoice = input.nextInt();
+        		  	  int contractorChoice = input.nextInt();
         
         
-        		  	  System.out.println("Purchase Report For " + customerData[customerChoice].firstName);
-			  	  System.out.println("Item\tQuantity\tDate")
+        		  	  System.out.println("Purchase Report For " + contractorData[contractorChoice].firstName);
+			  	  System.out.println("Item\tQuantity\tDate");
 			  	  for (int i = 0; i < sales.length; i++)
 			  	  {
-          		  		if (sales[i].customerData == sales[customerChoice].customerData)
+          		  		if (sales[i].contractorData == sales[contractorChoice].contractorData)
 			  		{
                 				System.out.println(sales[i].itemName + "\t" +
                                             		sales[i].quantity + "\t" +
