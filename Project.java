@@ -544,11 +544,13 @@ listItems(itemCount, inventory);
 		  
 		  case 1:
 			  listCustomers(customerCount, customerData);
-        		  System.out.println("Which Customer is Making a Purchase");
-        
-        		  int customerChoice = input.nextInt();
+
+        		  int customerChoice = nextInt("Which Customer?");
+                          
+                          
+                          
          		  System.out.println("Purchase Report For " + customerData.firstName);
-           		  System.out.println("Item\tQuantity\tDate")
+           		  System.out.println("Item\tQuantity\tDate");
         		  for (int i = 0; i < sales.length; i++)
 			  {
            		     if (sales[i].customerData == sales[customerChoice].customerData)
