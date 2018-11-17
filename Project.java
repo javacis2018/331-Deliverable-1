@@ -543,7 +543,21 @@ listItems(itemCount, inventory);
 		  switch(select4) {
 		  
 		  case 1:
-			  
+			  listCustomers(customerCount, customerData);
+        		  System.out.println("Which Customer is Making a Purchase");
+        
+        		  int customerChoice = input.nextInt();
+         		  System.out.println("Purchase Report For " + customerData.firstName);
+           		  System.out.println("Item\tQuantity\tDate")
+        		  for (int i = 0; i < sales.length; i++)
+			  {
+           		     if (sales[i].customerData == sales[customerChoice].customerData)
+            			{
+                			System.out.println(sales[i].itemName + "\t" +
+                                            		sales[i].quantity + "\t" +
+                                               				 sales[i].date);
+			        }
+			  }
 			  break;
 		  case 2:
 			  
