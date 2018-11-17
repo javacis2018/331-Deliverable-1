@@ -543,6 +543,11 @@ listItems(itemCount, inventory);
 		  switch(select4) {
 		  
 		  case 1:
+			  
+			  int select5 = nextInt("1. Customer\n2.Contractor");
+			  
+			  switch(select5) {
+			  case 1:
 			  listCustomers(customerCount, customerData);
 
         		  int customerChoice = nextInt("Which Customer?");
@@ -560,6 +565,17 @@ listItems(itemCount, inventory);
                                                				 sales[i].date);
 			        }
 			  }
+        		  break;
+        		  case 2:
+        			  
+        			  
+        			  
+        			  default:
+        				  System.out.println("Unexpected Input.");
+			  }
+        		  
+        		  
+        		  
 			  break;
 		  case 2:
 			  
