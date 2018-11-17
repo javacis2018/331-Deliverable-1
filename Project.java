@@ -558,7 +558,7 @@ listItems(itemCount, inventory);
 			  System.out.println("Item\tQuantity\tDate");
 			  for (int i = 0; i < sales.length; i++)
 			  {
-          		  	if (sales[i].customerData == sales[customerChoice].customerData)
+          		  	if (sales[i].customer == sales[customerChoice].customer)
 			  	{
                 		System.out.println(sales[i].itemName + "\t" +
                                             sales[i].quantity + "\t" +
@@ -566,22 +566,22 @@ listItems(itemCount, inventory);
            		  	}
             
         		  }
-        
-    			  }
         		  break;
+        		  
+        		  
+        		  
+        		  
+        		  
         		  case 2:
         			  
         			  listContractors(contractorCount, contractorData);
         			  int contractorChoice = nextInt("Which Contractor?");
-        
-        		  	  int contractorChoice = input.nextInt();
-        
-        
+      
         		  	  System.out.println("Purchase Report For " + contractorData[contractorChoice].firstName);
 			  	  System.out.println("Item\tQuantity\tDate");
 			  	  for (int i = 0; i < sales.length; i++)
 			  	  {
-          		  		if (sales[i].contractorData == sales[contractorChoice].contractorData)
+          		  		if (sales[i].customer == sales[contractorChoice].customer)
 			  		{
                 				System.out.println(sales[i].itemName + "\t" +
                                             		sales[i].quantity + "\t" +
@@ -590,15 +590,15 @@ listItems(itemCount, inventory);
             
         		 	  }
         
-    			  	  
-        			  
+    		  	  break;
+		  
         			  default:
         				  System.out.println("Unexpected Input.");
-			  }
-        		  
-        		  
-        		  
 			  break;
+			  }
+      
+      	  
+			  
 		  case 2:
 			  
 			  //PURCHASE HISTORY (ITEM)
@@ -611,13 +611,13 @@ listItems(itemCount, inventory);
 			  
 			  int flag = 0;
 			  
-			  int select5 = nextInt("Select an item ID.");
+			  int select6 = nextInt("Select an item ID.");
 			  
 			  for (int q = 0; q < saleCount - 3000; q++) {
 				  Sale currentSale = sales[q];
 				  for (int w = 0; w < currentSale.unique; w++) {
 					
-					  if(select5 == currentSale.itemCache[w]) {
+					  if(select6 == currentSale.itemCache[w]) {
 						  
 						  dates[flag] = currentSale.date;
 						  
