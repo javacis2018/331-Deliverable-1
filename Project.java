@@ -552,13 +552,37 @@ listItems(itemCount, inventory);
         		  System.out.println("Which Customer is Making a Purchase");
         
         		  int customerChoice = input.nextInt();
-        
-        
-        		  System.out.println("Purchase Report For " + customerData[customerChoice].firstName);
+        		  
+        		  String[] items = new String[1000];
+        		  int[] quant = new int[1000];
+        		  double[] total2 = new double[1000];
+        		  String[] date2 = new String[1000];
+        		  
+        		  int flag2 = 0;
+        		  
+        //have customerID
+        		  for (int q = 0; q < saleCount - 3000; q++) {
+    				  Sale currentSale = sales[q];
+    				  
+    				  if (customerData[customerChoice].toString().equals(sales[q].customer.toString())) {
+    					  date2[flag2] = sales[q].date;
+    					  total2[flag2] = sales[q].total;
+    					  
+    					  for(int t = 0; t < sales[q].unique; t++) {
+    						  items[flag2].concat(itemCache[t]+"");
+    						  //BLAH BLAH
+    					  }
+    					  
+    				  }
+
+    			  } //for q
+        		  
+        		  
+        		  /*System.out.println("Purchase Report For " + customerData[customerChoice].firstName);
 			  System.out.println("Item\tQuantity\tDate");
 			  for (int i = 0; i < sales.length; i++)
 			  {
-          		  	if (sales[i].customer == sales[customerChoice].customer)
+          		  	if (sales[i].customer == sales[customerChoice+1].customer)
 			  	{
                 		System.out.println(sales[i].itemName + "\t" +
                                             sales[i].quantity + "\t" +
@@ -566,10 +590,8 @@ listItems(itemCount, inventory);
            		  	}
             
         		  }
+        		  */
         		  break;
-        		  
-        		  
-        		  
         		  
         		  
         		  case 2:
