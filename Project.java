@@ -568,7 +568,11 @@ listItems(itemCount, inventory);
         		  break;
         		  case 2:
         			  
+        			  listContractors(contractorCount, contractorData);
+        			  int contractorChoice = nextInt("Which Contractor?");
         			  
+        			  
+        			  //REST OF THE CODE
         			  
         			  default:
         				  System.out.println("Unexpected Input.");
