@@ -108,7 +108,7 @@ public class Project {
                 
              sales[0] = new Sale(itemC0, itemQ0, 2, "December 12, 1996", 135.00, customerData[3]);
              saleCount++;
-             sales[1] = new Sale(itemC1, itemQ1, 3, "September 12, 2014", 224.00, customerData[0]);
+             sales[1] = new Sale(itemC1, itemQ1, 3, "September 12, 2014", 224.00, customerData[0]); //Bob
              saleCount++;   
              sales[2] = new Sale(itemC2, itemQ2, 2, "October 12, 2005", 700.00, customerData[2]);
              saleCount++; 
@@ -546,16 +546,20 @@ listItems(itemCount, inventory);
 			  
 			  //List purchases by Customer
 			  
-			  int select5 = nextInt("1. Customer\n2.Contractor");
+			  int select5 = nextInt("1. Customer\n2. Contractor");
 			  
 			  switch(select5) {
 			  case 1:
 			  listCustomers(customerCount, customerData);
-        		  System.out.println("Which Customer is Making a Purchase?");
+        		  System.out.println("Display data for which customer?");
         
         		  int customerChoice = input.nextInt();
+        		  //input.nextLine();
         		  
         		  String[] items = new String[1000];
+        		  for (int g = 0; g < 1000; g++) {
+        			  items[g] = "";
+        		  }
         		  int[] quant = new int[1000];
         		  double[] total2 = new double[1000];
         		  String[] date2 = new String[1000];
@@ -571,21 +575,23 @@ listItems(itemCount, inventory);
     					  total2[flag2] = currentSale.total;
     					  
     					  for(int t = 0; t < currentSale.unique; t++) {
-    						  items[flag2].concat("\n"+currentSale.itemCache[t]+" // " +currentSale.itemQty[t]);
+    						  //NULL POINTER BELOW
+    						  items[flag2].concat("\nID: "+currentSale.itemCache[t]+" // QTY: " +currentSale.itemQty[t]);
     						  
     					  }
     					  flag2++;
     					  
-    				  }
+    				  } //if
 
     			  } //for q
         		  System.out.println(customerData[customerChoice].firstName +" "+customerData[customerChoice].lastName);
         		  for (int g = 0; g < flag2; g++) {
-        			  System.out.println(date2[flag2]);
-        			  System.out.println(total2[flag2]);
-        			  System.out.print(items[flag2]);
+        			  System.out.println(date2[g]);
+        			  System.out.println("$"+total2[g]);
+        			  System.out.print(items[g]);
         		  }
-        		  
+        		  System.out.println("End.");
+        		  break;
         		  /*System.out.println("Purchase Report For " + customerData[customerChoice].firstName);
 			  System.out.println("Item\tQuantity\tDate");
 			  for (int i = 0; i < sales.length; i++)
@@ -599,29 +605,12 @@ listItems(itemCount, inventory);
             
         		  }
         		  */
-        		  break;
-        		  
-        		  
+
         		  case 2:
         			  
         			  listContractors(contractorCount, contractorData);
         			  int contractorChoice = nextInt("Which Contractor?");
-      /*
-        		  	  System.out.println("Purchase Report For " + contractorData[contractorChoice].firstName);
-			  	  System.out.println("Item\tQuantity\tDate");
-			  	  for (int i = 0; i < sales.length; i++)
-			  	  {
-          		  		if (sales[i].customer == sales[contractorChoice].customer)
-			  		{
-                				System.out.println(sales[i].itemName + "\t" +
-                                            		sales[i].quantity + "\t" +
-                                                		sales[i].date);
-           		  	  	}
-            
-        		 	  }
-        
-    		  	  break;
-		  */
+
         			  default:
         				  System.out.println("Unexpected Input.");
 			  break;
@@ -681,24 +670,6 @@ listItems(itemCount, inventory);
 		  
 		  }
     	  
-    	  //Purchase History for any given Customer (both types). This should show Items,
-            //quantities, total purchase cost, and dates for the Customer. 
-    	  /*
-    	   * PURCHASE HISTORY FOR CUSTOMER (Akram)
-    	   */
-    	  
-    	  
-    	  //CURRENT INVENTORY LEVELS ~ Half Psuedo/Half Technical Code (Method to be moved outside main later)
-	/*
-		public static void Inventory Report() {
-			for ( int x = 0; x < inventory.length; x++)
-        		{
-          		System.out.print(inventory[~Location of Name]+": ");
-          		System.out.print(inventory[~Location of Stock]);
-                	 }
-       			System.out.println();
-		}
-    	  */
     	  break;
     	  
       case 0:
