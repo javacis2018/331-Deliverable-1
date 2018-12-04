@@ -3,8 +3,6 @@
  * 
  * @author Tyler Davis
  * @author Christopher Kang
- * @author Jeremy Snyder
- * @author Akram Choukri
  * 
  * Contractor - This class extends Customer and adds additional information
  * for contractor objects.

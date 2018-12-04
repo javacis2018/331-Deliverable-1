@@ -3,8 +3,6 @@
  * 
  * @author Tyler Davis
  * @author Christopher Kang
- * @author Jeremy Snyder
- * @author Akram Choukri
  * 
  * Customer - Customer objects are defined by this class.
  */

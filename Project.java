@@ -4,8 +4,6 @@ import java.util.Scanner;
  * 
  * @author Tyler Davis
  * @author Christopher Kang
- * @author Jeremy Snyder
- * @author Akram Choukri
  * 
  * Project - This file stores most of the core logic for this application.
  */
@@ -661,7 +659,7 @@ listItems(itemCount, inventory);
 		  case 3:
 			  
 			  System.out.println("Item Name\tQuantity");
-                          for(int i = 0; i<inventory.length;i++)
+                          for(int i = 0; i<itemCount-2000;i++)
                               System.out.println(inventory[i].itemName+"\t"+inventory[i].count);
                               
 			  break;

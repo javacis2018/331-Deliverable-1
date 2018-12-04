@@ -3,8 +3,6 @@
  * 
  * @author Tyler Davis
  * @author Christopher Kang
- * @author Jeremy Snyder
- * @author Akram Choukri
  * 
  * Item - This class defines Items that the system can sell to Customers.
  */
